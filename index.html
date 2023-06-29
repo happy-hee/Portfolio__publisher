@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- 기본 CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>SPACE</title>
   </head>
@@ -105,6 +110,56 @@
       </div>
     </div>
 
+    <!-- 행성 정보 -->
+    <section class="sec sec__planet" id="planetSec">
+      <div class="res-inner">
+        <div class="sec__title-wrapper">
+          <h2 class="sec__title">행성 정보</h2>
+          <div class="sec__sub-title">
+            Swiper 플러그인을 사용한 슬라이드 입니다. 클릭시 모달이 열립니다.
+          </div>
+        </div>
+        <!-- 슬라이드 -->
+        <div class="sec__slide">
+          <div class="swiper planet-slide">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide planet-slide__item">
+                <div class="planet-slide__sub-title">많이 가는 행성 1위!</div>
+                <div class="planet-slide__title">해왕성</div>
+              </div>
+              <div class="swiper-slide planet-slide__item">
+                <div class="planet-slide__sub-title">많이 가는 행성 2위!</div>
+                <div class="planet-slide__title">천왕성</div>
+              </div>
+              <div class="swiper-slide planet-slide__item">
+                <div class="planet-slide__sub-title">많이 가는 행성 3위!</div>
+                <div class="planet-slide__title">명왕성</div>
+              </div>
+              <div class="swiper-slide planet-slide__item">
+                <div class="planet-slide__sub-title">많이 가는 행성 4위!</div>
+                <div class="planet-slide__title">토성</div>
+              </div>
+              <div class="swiper-slide planet-slide__item">
+                <div class="planet-slide__sub-title">많이 가는 행성 5위!</div>
+                <div class="planet-slide__title">화성</div>
+              </div>
+              <div class="swiper-slide planet-slide__item">
+                <div class="planet-slide__sub-title">많이 가는 행성 6위!</div>
+                <div class="planet-slide__title">금성</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 슬라이드 버튼 -->
+          <div class="planet-slide__prev swiper-button-prev"></div>
+          <div class="planet-slide__next swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Swiper 스크립트 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- 기본 스크립트 -->
     <script src="./js/script.js"></script>
   </body>
 </html>

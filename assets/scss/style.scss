@@ -20,7 +20,7 @@ body {
   background-color: #fff;
 
   /* 추후 삭제 */
-  height: 1300px;
+  height: 13000px;
 }
 
 .h1,
@@ -207,7 +207,7 @@ textarea {
 /* 메인 비주얼
 ========================================================================== */
 .main-visual {
-  height: 80rem;
+  height: 100vh;
   position: relative;
   &__title {
     font-size: 9rem;
@@ -255,6 +255,105 @@ textarea {
   }
   &__more {
     padding: 1rem 0 1rem 1rem;
+  }
+}
+
+/* 섹션
+========================================================================== */
+.sec {
+  padding: 20rem 0;
+  overflow: hidden;
+  &__title-wrapper {
+    margin-bottom: 6rem;
+  }
+  &__title {
+    font-size: $font-size-title;
+    margin-bottom: 3rem;
+  }
+  &__sub-title {
+    font-size: $font-size-subtitle;
+  }
+  &__slide {
+    position: relative;
+  }
+}
+
+/* 행성 정보
+========================================================================== */
+.planet-slide {
+  overflow: visible;
+  padding: 2rem 0;
+  margin: 0 -1.5rem;
+  &__item {
+    width: 35rem;
+    height: 45rem;
+    padding: 3rem;
+    margin: 0 1.5rem;
+    border-radius: 2rem;
+    box-shadow: 2px 4px 11px rgb(0 0 0 / 12%);
+    transition: $transition-ease-in-out;
+    cursor: pointer;
+    &:hover {
+      scale: 102%;
+      transition: $transition-ease-in-out;
+    }
+    &:nth-child(1) {
+      background-image: url("../images/planet/planet_neptune.jpg");
+    }
+    &:nth-child(2) {
+      background-image: url("../images/planet/planet_uranus.jpg");
+    }
+    &:nth-child(3) {
+      background-image: url("../images/planet/planet_pluto.jpg");
+    }
+    &:nth-child(4) {
+      background-image: url("../images/planet/planet_saturn.jpg");
+    }
+    &:nth-child(5) {
+      background-image: url("../images/planet/planet_mars.jpg");
+    }
+    &:nth-child(6) {
+      background-image: url("../images/planet/planet_venus.jpg");
+    }
+  }
+  &__title {
+    font-size: 2.6rem;
+    font-weight: $font-bold;
+  }
+  &__sub-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.4rem;
+  }
+  &__next,
+  &__prev {
+    background-color: rgb(0 0 0 / 15%);
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    color: #fff;
+    text-align: center;
+    transition: $transition-ease-in-out;
+  }
+  &__next:hover,
+  &__prev:hover {
+    background-color: rgb(0 0 0 / 30%);
+    transition: $transition-ease-in-out;
+  }
+  &__next:after,
+  &__prev:after {
+    font-family: swiper-icons;
+    font-size: 2.3rem;
+  }
+  &__next:after {
+    content: "next";
+    margin-right: -0.3em;
+  }
+  &__prev:after {
+    content: "prev";
+    margin-left: -0.3em;
+  }
+  &__disabled {
+    display: none;
   }
 }
 

@@ -4,6 +4,7 @@
 /* Font - size */
 /* Font - weight */
 /* Color */
+/**/
 * {
   letter-spacing: normal;
   box-sizing: border-box;
@@ -23,7 +24,7 @@ body {
   color: #000;
   background-color: #fff;
   /* 추후 삭제 */
-  height: 1300px;
+  height: 13000px;
 }
 
 .h1,
@@ -204,7 +205,7 @@ textarea::placeholder {
 /* 메인 비주얼
 ========================================================================== */
 .main-visual {
-  height: 80rem;
+  height: 100vh;
   position: relative;
 }
 .main-visual__title {
@@ -253,6 +254,102 @@ textarea::placeholder {
 }
 .notice-bar__more {
   padding: 1rem 0 1rem 1rem;
+}
+
+/* 섹션
+========================================================================== */
+.sec {
+  padding: 20rem 0;
+  overflow: hidden;
+}
+.sec__title-wrapper {
+  margin-bottom: 6rem;
+}
+.sec__title {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+.sec__sub-title {
+  font-size: 2rem;
+}
+.sec__slide {
+  position: relative;
+}
+
+/* 행성 정보
+========================================================================== */
+.planet-slide {
+  overflow: visible;
+  padding: 2rem 0;
+  margin: 0 -1.5rem;
+}
+.planet-slide__item {
+  width: 35rem;
+  height: 45rem;
+  padding: 3rem;
+  margin: 0 1.5rem;
+  border-radius: 2rem;
+  box-shadow: 2px 4px 11px rgba(0, 0, 0, 0.12);
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+.planet-slide__item:hover {
+  scale: 102%;
+  transition: all 0.1s ease-in-out;
+}
+.planet-slide__item:nth-child(1) {
+  background-image: url("../images/planet/planet_neptune.jpg");
+}
+.planet-slide__item:nth-child(2) {
+  background-image: url("../images/planet/planet_uranus.jpg");
+}
+.planet-slide__item:nth-child(3) {
+  background-image: url("../images/planet/planet_pluto.jpg");
+}
+.planet-slide__item:nth-child(4) {
+  background-image: url("../images/planet/planet_saturn.jpg");
+}
+.planet-slide__item:nth-child(5) {
+  background-image: url("../images/planet/planet_mars.jpg");
+}
+.planet-slide__item:nth-child(6) {
+  background-image: url("../images/planet/planet_venus.jpg");
+}
+.planet-slide__title {
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+.planet-slide__sub-title {
+  font-size: 1.6rem;
+  margin-bottom: 1.4rem;
+}
+.planet-slide__next, .planet-slide__prev {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  color: #fff;
+  text-align: center;
+  transition: all 0.1s ease-in-out;
+}
+.planet-slide__next:hover, .planet-slide__prev:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in-out;
+}
+.planet-slide__next:after, .planet-slide__prev:after {
+  font-family: swiper-icons;
+  font-size: 2.3rem;
+}
+.planet-slide__next:after {
+  content: "next";
+  margin-right: -0.3em;
+}
+.planet-slide__prev:after {
+  content: "prev";
+  margin-left: -0.3em;
+}
+.planet-slide__disabled {
+  display: none;
 }
 
 /* 웹접근성

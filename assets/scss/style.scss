@@ -144,6 +144,9 @@ textarea {
 /* banner
 ========================================================================== */
 .banner {
+  position: absolute;
+  top: 0;
+  right: 0;
   background-color: $gray;
   padding: 1rem 0;
   font-size: $font-size-small;
@@ -195,5 +198,21 @@ textarea {
     font-size: 2rem;
     font-weight: $font-exbold;
     color: #000;
+  }
+}
+
+/* 메인 비주얼
+========================================================================== */
+.main-visual {
+  height: 80rem;
+  border: 1px solid red;
+  position: relative;
+  &__title {
+    font-size: 9rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    line-height: 1.6;
   }
 }

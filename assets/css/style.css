@@ -144,6 +144,9 @@ textarea::placeholder {
 /* banner
 ========================================================================== */
 .banner {
+  position: absolute;
+  top: 0;
+  right: 0;
   background-color: #f5f5f6;
   padding: 1rem 0;
   font-size: 1.4rem;
@@ -194,4 +197,20 @@ textarea::placeholder {
   font-size: 2rem;
   font-weight: 700;
   color: #000;
+}
+
+/* 메인 비주얼
+========================================================================== */
+.main-visual {
+  height: 80rem;
+  border: 1px solid red;
+  position: relative;
+}
+.main-visual__title {
+  font-size: 9rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  line-height: 1.6;
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Font */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
 /* Font - size */
@@ -70,6 +71,8 @@ button {
   position: relative;
   margin: 0 auto;
   padding: 0 2rem;
+  max-width: 1280px;
+  height: 100%;
 }
 
 /* input & selectbox & textarea
@@ -153,4 +156,42 @@ textarea::placeholder {
 .banner__link {
   padding-left: 3rem;
   font-weight: 600;
+}
+
+/* 헤더
+========================================================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 1.4rem 0;
+  background: #fff;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  font-size: 0;
+}
+
+.gnb__list {
+  display: flex;
+}
+.gnb__item {
+  padding: 1rem 2.5rem;
+  font-size: 1.4rem;
+}
+
+.logo {
+  display: inline-block;
+}
+.logo__link {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
 }

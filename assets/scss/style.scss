@@ -14,7 +14,7 @@ html {
 
 body {
   font-family: $font-main;
-  font-size: $font-body-size;
+  font-size: $font-size-body;
   font-weight: $font-regular;
   color: #000;
   background-color: #fff;
@@ -67,6 +67,8 @@ button {
   position: relative;
   margin: 0 auto;
   padding: 0 2rem;
+  max-width: 1280px;
+  height: 100%;
 }
 
 /* input & selectbox & textarea
@@ -144,7 +146,7 @@ textarea {
 .banner {
   background-color: $gray;
   padding: 1rem 0;
-  font-size: $font-small-size;
+  font-size: $font-size-small;
   text-align: center;
   &__content {
     display: flex;
@@ -153,5 +155,45 @@ textarea {
   &__link {
     padding-left: 3rem;
     font-weight: $font-bold;
+  }
+}
+
+/* 헤더
+========================================================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 1.4rem 0;
+  background: #fff;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    font-size: 0;
+  }
+}
+
+.gnb {
+  &__list {
+    display: flex;
+  }
+  &__item {
+    padding: 1rem 2.5rem;
+    font-size: $font-size-small;
+  }
+}
+
+.logo {
+  display: inline-block;
+  &__link {
+    display: block;
+    font-size: 2rem;
+    font-weight: $font-exbold;
+    color: #000;
   }
 }

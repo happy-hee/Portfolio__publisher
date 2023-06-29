@@ -18,6 +18,9 @@ body {
   font-weight: $font-regular;
   color: #000;
   background-color: #fff;
+
+  /* 추후 삭제 */
+  height: 1300px;
 }
 
 .h1,
@@ -205,7 +208,6 @@ textarea {
 ========================================================================== */
 .main-visual {
   height: 80rem;
-  border: 1px solid red;
   position: relative;
   &__title {
     font-size: 9rem;
@@ -215,4 +217,56 @@ textarea {
     justify-content: center;
     line-height: 1.6;
   }
+}
+
+/* 공지 및 이벤트 바
+========================================================================== */
+.notice-bar {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  &__left {
+    width: 50%;
+    background-color: #000;
+    color: #fff;
+    &--inner {
+      margin: 0 0 0 auto;
+    }
+  }
+  &__right {
+    width: 50%;
+    &--inner {
+      margin: 0 auto 0 0;
+    }
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    max-width: 640px;
+    padding: 1.4rem 2rem;
+  }
+  &__title {
+    font-weight: $font-bold;
+    margin-right: 2rem;
+  }
+  &__list {
+    flex-grow: 1;
+  }
+  &__more {
+    padding: 1rem 0 1rem 1rem;
+  }
+}
+
+/* 웹접근성
+========================================================================== */
+/* 스크린리더에서만 읽혀지도록 숨김처리 */
+.sr-only {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }

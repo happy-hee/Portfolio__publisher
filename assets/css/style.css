@@ -22,6 +22,8 @@ body {
   font-weight: 300;
   color: #000;
   background-color: #fff;
+  /* 추후 삭제 */
+  height: 1300px;
 }
 
 .h1,
@@ -203,7 +205,6 @@ textarea::placeholder {
 ========================================================================== */
 .main-visual {
   height: 80rem;
-  border: 1px solid red;
   position: relative;
 }
 .main-visual__title {
@@ -213,4 +214,56 @@ textarea::placeholder {
   height: 100%;
   justify-content: center;
   line-height: 1.6;
+}
+
+/* 공지 및 이벤트 바
+========================================================================== */
+.notice-bar {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.notice-bar__left {
+  width: 50%;
+  background-color: #000;
+  color: #fff;
+}
+.notice-bar__left--inner {
+  margin: 0 0 0 auto;
+}
+.notice-bar__right {
+  width: 50%;
+}
+.notice-bar__right--inner {
+  margin: 0 auto 0 0;
+}
+.notice-bar__inner {
+  display: flex;
+  align-items: center;
+  max-width: 640px;
+  padding: 1.4rem 2rem;
+}
+.notice-bar__title {
+  font-weight: 600;
+  margin-right: 2rem;
+}
+.notice-bar__list {
+  flex-grow: 1;
+}
+.notice-bar__more {
+  padding: 1rem 0 1rem 1rem;
+}
+
+/* 웹접근성
+========================================================================== */
+/* 스크린리더에서만 읽혀지도록 숨김처리 */
+.sr-only {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }

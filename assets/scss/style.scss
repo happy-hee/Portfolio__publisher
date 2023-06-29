@@ -1,0 +1,157 @@
+@import "variable";
+
+* {
+  letter-spacing: normal;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  word-break: keep-all;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-main;
+  font-size: $font-body-size;
+  font-weight: $font-regular;
+  color: #000;
+  background-color: #fff;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+svg {
+  display: block;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.res-inner {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* input & selectbox & textarea
+========================================================================== */
+input[type="text"],
+input[type="password"],
+input[type="submit"],
+input[type="search"],
+input[type="tel"],
+input[type="email"],
+html input[type="button"],
+input[type="reset"] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  outline: 0;
+}
+textarea {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+input {
+  width: 100%;
+  padding: 1rem 0;
+  border-width: 0 0 2px 0;
+  border-color: #000;
+  border-style: solid;
+  ::placeholder {
+    font-weight: 300;
+  }
+}
+.input {
+  &__style {
+    &:focus,
+    &:focus-visible {
+      outline: 0;
+      border-width: 0 0 2px 0;
+      border-color: #000;
+    }
+  }
+}
+textarea {
+  padding: 1.4rem;
+  width: 100%;
+  border-color: #000;
+  resize: none;
+  &::placeholder {
+    font-weight: 400;
+  }
+}
+.textarea {
+  &__style {
+    &:focus,
+    &:focus-visible {
+      outline: 0;
+      border-width: 0 0 2px 0;
+      border-color: #000;
+    }
+  }
+}
+::placeholder {
+  color: #bbb;
+  font-weight: 300;
+}
+
+/* banner
+========================================================================== */
+.banner {
+  background-color: $gray;
+  padding: 1rem 0;
+  font-size: $font-small-size;
+  text-align: center;
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
+  &__link {
+    padding-left: 3rem;
+    font-weight: $font-bold;
+  }
+}

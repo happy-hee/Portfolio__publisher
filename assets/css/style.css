@@ -149,6 +149,7 @@ textarea::placeholder {
 .banner {
   position: absolute;
   top: 0;
+  left: 0;
   right: 0;
   background-color: #f5f5f6;
   padding: 1rem 0;
@@ -167,9 +168,8 @@ textarea::placeholder {
 /* 헤더
 ========================================================================== */
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
+  top: 3.6rem;
   width: 100%;
   height: auto;
   padding: 1.4rem 0;

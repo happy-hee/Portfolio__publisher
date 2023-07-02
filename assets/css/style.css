@@ -440,6 +440,57 @@ textarea::placeholder {
   background-image: url("../images/news/news_1.jpg");
 }
 
+/* 질문 및 답변
+========================================================================== */
+/* Accordion menu
+========================================================================== */
+.accordion__item {
+  position: relative;
+  padding: 0 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+.accordion__item.active .accordion__top::after {
+  transform: rotate(-180deg);
+}
+.accordion__item.active .accordion__body {
+  padding: 1rem 6rem 2rem 0;
+  max-height: 500px;
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+}
+.accordion__top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 3rem 6rem 3rem 0;
+  font-size: 1.6rem;
+  text-align: left;
+  cursor: pointer;
+}
+.accordion__top::after {
+  position: absolute;
+  top: 50%;
+  margin-top: -0.9rem;
+  right: 2rem;
+  content: "";
+  display: block;
+  width: 1.8rem;
+  height: 1.8rem;
+  background: url(../images/arrow.png) no-repeat;
+  background-size: 100%;
+  transition: transform 0.2s linear;
+}
+.accordion__body {
+  max-height: 0;
+  overflow: hidden;
+  font-size: 1.6rem;
+  text-align: left;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
 /* 웹접근성
 ========================================================================== */
 /* 스크린리더에서만 읽혀지도록 숨김처리 */

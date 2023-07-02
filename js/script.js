@@ -32,3 +32,21 @@ const newsSwiper = new Swiper(".news-slide", {
     disabledClass: "slide__disabled",
   },
 });
+
+/**
+ * 아코디언 메뉴
+ */
+const accordionItems = document.querySelectorAll(".accordion__item");
+accordionItems.forEach((accordionItem) => {
+  // 클릭시 active
+  accordionItem.addEventListener("click", () => {
+    accordionItem.classList.toggle("active");
+  });
+
+  // 엔터시 active
+  accordionItem.addEventListener("keyup", (e) => {
+    if (e.keyCode === 13) {
+      accordionItem.classList.toggle("active");
+    }
+  });
+});

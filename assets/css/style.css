@@ -150,7 +150,7 @@ textarea:focus, textarea:focus-visible {
   font-weight: 200;
 }
 
-/* banner
+/* 배너
 ========================================================================== */
 .banner {
   position: absolute;
@@ -180,6 +180,7 @@ textarea:focus, textarea:focus-visible {
   height: auto;
   padding: 1.4rem 0;
   background: #fff;
+  z-index: 2;
 }
 .header__inner {
   display: flex;
@@ -194,8 +195,11 @@ textarea:focus, textarea:focus-visible {
   display: flex;
 }
 .gnb__item {
-  padding: 1rem 2.5rem;
+  display: flex;
   font-size: 1.4rem;
+}
+.gnb__item a {
+  padding: 1rem 2.5rem;
 }
 
 .logo {
@@ -557,6 +561,52 @@ textarea:focus, textarea:focus-visible {
 }
 .contact__form {
   margin-bottom: 5rem;
+}
+
+/* 포트폴리오 정보
+========================================================================== */
+.title-visual {
+  height: 100vh;
+}
+.title-visual__title {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  font-size: 9rem;
+  font-weight: 800;
+}
+
+.portfolio__wrapper {
+  display: flex;
+}
+.portfolio__info {
+  margin-bottom: 6rem;
+}
+.portfolio__info--left, .portfolio__info--right {
+  flex-basis: 50%;
+}
+.portfolio__title {
+  margin-bottom: 2.4rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.portfolio__item {
+  margin-bottom: 1.6rem;
+}
+.portfolio__item a {
+  color: #0083ff;
+  text-decoration: underline;
+}
+.portfolio__item--title {
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.portfolio__item--sub-title {
+  margin-bottom: 2rem;
+}
+.portfolio__item-sub {
+  margin-bottom: 4rem;
 }
 
 /* 웹접근성

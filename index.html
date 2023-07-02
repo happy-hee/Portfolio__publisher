@@ -55,9 +55,7 @@
                   <a class="gnb__link" href="#contactSec">문의하기</a>
                 </li>
                 <li class="gnb__item">
-                  <a class="gnb__link" href="#portfolioInfoSec"
-                    >포트폴리오 정보</a
-                  >
+                  <a class="gnb__link" href="#portfolioSec">포트폴리오 정보</a>
                 </li>
                 <li class="gnb__item">
                   <a class="gnb__link" href="#createInfoSec">제작자 정보</a>
@@ -318,7 +316,7 @@
     </section>
 
     <!-- 질문 및 답변 -->
-    <section class="sec sec__news" id="faqSec">
+    <section class="sec sec__faq" id="faqSec">
       <div class="res-inner">
         <div class="sec__title-wrapper">
           <h2 class="sec__title">질문 및 답변</h2>
@@ -375,7 +373,7 @@
     </section>
 
     <!-- 우주 여행 A-Z -->
-    <section class="sec sec__news" id="atozSec">
+    <section class="sec sec__atoz" id="atozSec">
       <div class="res-inner">
         <div class="sec__title-wrapper">
           <h2 class="sec__title">우주 여행 A-Z</h2>
@@ -431,7 +429,7 @@
     </section>
 
     <!-- 문의하기 -->
-    <section class="sec sec__news" id="contactSec">
+    <section class="sec sec__contact" id="contactSec">
       <div class="res-inner">
         <div class="sec__title-wrapper">
           <h2 class="sec__title">문의하기</h2>
@@ -443,7 +441,7 @@
         <div class="contact__form-wrapper">
           <div class="contact__form-row">
             <div class="contact__form">
-              <label for="checkinInput" class="">출발일</label>
+              <label for="departureDateInput" class="">출발일</label>
               <input
                 class=""
                 type="text"
@@ -451,7 +449,7 @@
                 placeholder="출발 날짜" />
             </div>
             <div class="contact__form">
-              <label for="checkoutInput" class="">오는일</label>
+              <label for="returnDateInput" class="">오는일</label>
               <input
                 class=""
                 type="text"
@@ -491,6 +489,148 @@
               placeholder="문의사항을 입력해주세요."></textarea>
           </div>
           <button class="sec__btn" type="button">전송하기</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 포트폴리오 정보 -->
+    <div class="title-visual">
+      <div class="res-inner">
+        <div class="title-visual__title">포트폴리오 정보</div>
+      </div>
+    </div>
+    <section class="sec sec__portfolio" id="portfolioSec">
+      <div class="res-inner">
+        <div class="sec__title-wrapper">
+          <h2 class="sec__title">포트폴리오 정보</h2>
+        </div>
+        <div class="portfolio__wrapper">
+          <div class="portfolio__info--left">
+            <div class="portfolio__info">
+              <div class="portfolio__title">[사용 기술]</div>
+              <ul class="portfolio__list">
+                <li class="portfolio__item">
+                  <a
+                    href="https://github.com/happy-hee/Portfolio_space/blob/main/index.html"
+                    target="_blank"
+                    >HTML</a
+                  >
+                </li>
+                <li class="portfolio__item">
+                  <a
+                    href="https://github.com/happy-hee/Portfolio_space/tree/main/assets/scss"
+                    target="_blank"
+                    >SCSS</a
+                  >
+                </li>
+                <li class="portfolio__item">
+                  <a
+                    href="https://github.com/happy-hee/Portfolio_space/blob/main/js/script.js"
+                    target="_blank"
+                    >Javascript</a
+                  >
+                </li>
+                <li class="portfolio__item">
+                  -
+                  <!--추후 입력-->
+                  하드코딩
+                </li>
+                <li class="portfolio__item">
+                  -
+                  <!--추후 입력-->
+                  플러그인 사용
+                </li>
+                <li class="portfolio__item">- 작업 툴 : VScode, Photoshop</li>
+              </ul>
+            </div>
+            <div class="portfolio__info">
+              <div class="portfolio__title">[작업일시 및 기여도]</div>
+              <ul class="portfolio__list">
+                <li class="portfolio__item">
+                  - 2023.<!--추후 입력-->
+                  ~ 2023.<!--추후 입력-->
+                  (일)
+                </li>
+                <li class="portfolio__item">- 프로젝트 전체 인원 : 1명</li>
+                <li class="portfolio__item">
+                  - 퍼블리싱 및 디자인 (기여도 100%)
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="portfolio__info--right">
+            <div class="portfolio__info">
+              <div class="portfolio__title">[진행 과정]</div>
+              <ul class="portfolio__list">
+                <li class="portfolio__item">
+                  <div class="portfolio__item--title">
+                    1. 개발적인 부분 위주로 생각하여 간단하게 기획
+                  </div>
+                  <div class="portfolio__item-sub">
+                    <div class="portfolio__item--sub-title">
+                      1) 어떤 기술을 사용하면 좋을까?
+                    </div>
+                    <ul class="portfolio__list">
+                      <li class="portfolio__item">
+                        - 다양한 기능, 플러그인을 사용해 볼 수 있도록 고려
+                      </li>
+                      <li class="portfolio__item">
+                        - 인터랙티브한 웹을 만들기 위해 애니메이션 효과 적용
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="portfolio__item-sub">
+                    <div class="portfolio__item--sub-title">
+                      2) 반응형/적응형 결정
+                    </div>
+                    <ul class="portfolio__list">
+                      <li class="portfolio__item">- 반응형 웹</li>
+                      <li class="portfolio__item">
+                        - 웹접근성을 고려하여 rem 단위 사용
+                      </li>
+                      <li class="portfolio__item">
+                        - 분기점 : 768(Tablet) / 1024(Large Tablet) /
+                        1280(Desctop)
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="portfolio__item-sub">
+                    <div class="portfolio__item--sub-title">
+                      3) 완성 후 체크할 점
+                    </div>
+                    <ul class="portfolio__list">
+                      <li class="portfolio__item">- 웹접근성 확인</li>
+                      <li class="portfolio__item">- 웹표준 확인</li>
+                      <li class="portfolio__item">- 크로스 브라우징 확인</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="portfolio__item">
+                  <div class="portfolio__item--title">
+                    2. 퍼블리싱 작업 진행
+                  </div>
+                  <div class="portfolio__item-sub">
+                    <ul class="portfolio__list">
+                      <li class="portfolio__item">
+                        -
+                        <!--추후 입력-->
+                        플러그인 적용 후 커스터마이징
+                      </li>
+                      <li class="portfolio__item">
+                        - 키보드 접근성을 고려하여 키보드만 사용해서 페이지의
+                        모든 부분을 탐색할 수 있도록 작업
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="portfolio__item">
+                  <div class="portfolio__item--title">
+                    3. 웹접근성 / 웹표준 / 크로스 브라우징 확인
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>

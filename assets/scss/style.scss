@@ -145,7 +145,7 @@ textarea {
   font-weight: $font-regular;
 }
 
-/* banner
+/* 배너
 ========================================================================== */
 .banner {
   position: absolute;
@@ -175,6 +175,7 @@ textarea {
   height: auto;
   padding: 1.4rem 0;
   background: #fff;
+  z-index: 2;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -190,8 +191,11 @@ textarea {
     display: flex;
   }
   &__item {
-    padding: 1rem 2.5rem;
+    display: flex;
     font-size: $font-size-small;
+    a {
+      padding: 1rem 2.5rem;
+    }
   }
 }
 
@@ -578,6 +582,54 @@ textarea {
   }
   &__form {
     margin-bottom: 5rem;
+  }
+}
+
+/* 포트폴리오 정보
+========================================================================== */
+.title-visual {
+  height: 100vh;
+  &__title {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    font-size: 9rem;
+    font-weight: 800;
+  }
+}
+.portfolio {
+  &__wrapper {
+    display: flex;
+  }
+  &__info {
+    margin-bottom: 6rem;
+    &--left,
+    &--right {
+      flex-basis: 50%;
+    }
+  }
+  &__title {
+    margin-bottom: 2.4rem;
+    font-size: $font-size-title-sm;
+    font-weight: $font-semi-bold;
+  }
+  &__item {
+    margin-bottom: 1.6rem;
+    a {
+      color: #0083ff;
+      text-decoration: underline;
+    }
+    &--title {
+      font-weight: $font-semi-bold;
+      margin-bottom: 2rem;
+    }
+    &--sub-title {
+      margin-bottom: 2rem;
+    }
+  }
+  &__item-sub {
+    margin-bottom: 4rem;
   }
 }
 

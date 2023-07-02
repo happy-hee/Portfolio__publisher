@@ -20,7 +20,7 @@ html {
 body {
   font-family: "Pretendard", sans-serif;
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: 200;
   color: #000;
   background-color: #fff;
   /* 추후 삭제 */
@@ -162,7 +162,7 @@ textarea::placeholder {
 }
 .banner__link {
   padding-left: 3rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* 헤더
@@ -210,6 +210,7 @@ textarea::placeholder {
 }
 .main-visual__title {
   font-size: 9rem;
+  font-weight: 900;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -246,7 +247,7 @@ textarea::placeholder {
   padding: 1.4rem 2rem;
 }
 .notice-bar__title {
-  font-weight: 600;
+  font-weight: 500;
   margin-right: 2rem;
 }
 .notice-bar__list {
@@ -267,6 +268,7 @@ textarea::placeholder {
 }
 .sec__title {
   font-size: 4rem;
+  font-weight: 500;
   margin-bottom: 3rem;
 }
 .sec__sub-title {
@@ -308,7 +310,7 @@ textarea::placeholder {
 }
 .slide__title {
   font-size: 2.6rem;
-  font-weight: 600;
+  font-weight: 500;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -442,8 +444,6 @@ textarea::placeholder {
 
 /* 질문 및 답변
 ========================================================================== */
-/* Accordion menu
-========================================================================== */
 .accordion__item {
   position: relative;
   padding: 0 2rem;
@@ -489,6 +489,42 @@ textarea::placeholder {
   text-align: left;
   opacity: 0;
   transition: all 0.2s ease-in-out;
+}
+
+/* 우주 여행 A-Z
+========================================================================== */
+.atoz-list__item {
+  margin-bottom: 6rem;
+  font-size: 3.6rem;
+  font-weight: 100;
+}
+.atoz-list__item--number {
+  font-weight: 500;
+}
+.atoz-list__item mark {
+  position: relative;
+  background-color: transparent;
+  columns: inherit;
+}
+.atoz-list__item mark span {
+  display: inline-block;
+  padding-left: 6px;
+}
+.atoz-list__item mark span:nth-child(1) {
+  width: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  height: 100%;
+}
+.atoz-list__item mark.active span:nth-child(1) {
+  width: 100%;
+  transition: width 0.5s;
+  background-color: #000;
+  color: #fff;
+  font-weight: 200;
 }
 
 /* 웹접근성

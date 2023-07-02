@@ -161,7 +161,7 @@ textarea {
   }
   &__link {
     padding-left: 3rem;
-    font-weight: $font-bold;
+    font-weight: $font-semi-bold;
   }
 }
 
@@ -199,7 +199,7 @@ textarea {
   &__link {
     display: block;
     font-size: 2rem;
-    font-weight: $font-exbold;
+    font-weight: $font-bold;
     color: #000;
   }
 }
@@ -211,6 +211,7 @@ textarea {
   position: relative;
   &__title {
     font-size: 9rem;
+    font-weight: $font-black;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -247,7 +248,7 @@ textarea {
     padding: 1.4rem 2rem;
   }
   &__title {
-    font-weight: $font-bold;
+    font-weight: $font-semi-bold;
     margin-right: 2rem;
   }
   &__list {
@@ -268,6 +269,7 @@ textarea {
   }
   &__title {
     font-size: $font-size-title;
+    font-weight: $font-semi-bold;
     margin-bottom: 3rem;
   }
   &__sub-title {
@@ -309,7 +311,7 @@ textarea {
   }
   &__title {
     font-size: 2.6rem;
-    font-weight: $font-bold;
+    font-weight: $font-semi-bold;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -459,8 +461,6 @@ textarea {
 
 /* 질문 및 답변
 ========================================================================== */
-/* Accordion menu
-========================================================================== */
 .accordion {
   &__item {
     position: relative;
@@ -509,6 +509,46 @@ textarea {
     text-align: left;
     opacity: 0;
     transition: all 0.2s ease-in-out;
+  }
+}
+
+/* 우주 여행 A-Z
+========================================================================== */
+.atoz-list {
+  &__item {
+    margin-bottom: 6rem;
+    font-size: 3.6rem;
+    font-weight: $font-light;
+    &--number {
+      font-weight: $font-semi-bold;
+    }
+    mark {
+      position: relative;
+      background-color: transparent;
+      columns: inherit;
+      span {
+        display: inline-block;
+        padding-left: 6px;
+      }
+      span:nth-child(1) {
+        width: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        height: 100%;
+      }
+      &.active {
+        span:nth-child(1) {
+          width: 100%;
+          transition: width 0.5s;
+          background-color: #000;
+          color: #fff;
+          font-weight: 200;
+        }
+      }
+    }
   }
 }
 

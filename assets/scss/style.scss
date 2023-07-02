@@ -5,7 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  word-break: keep-all;
+  word-break: break-all;
 }
 
 html {
@@ -261,7 +261,7 @@ textarea {
 /* 섹션
 ========================================================================== */
 .sec {
-  padding: 20rem 0;
+  padding: 16rem 0;
   overflow: hidden;
   &__title-wrapper {
     margin-bottom: 6rem;
@@ -278,51 +278,53 @@ textarea {
   }
 }
 
-/* 행성 정보
+/* 슬라이드
 ========================================================================== */
-.planet-slide {
+.slide {
   overflow: visible;
   padding: 2rem 0;
   margin: 0 -1.5rem;
   &__item {
-    width: 35rem;
+    width: 38rem;
     height: 45rem;
     padding: 3rem;
     margin: 0 1.5rem;
-    border-radius: 2rem;
+    border-radius: 1.4rem;
     box-shadow: 2px 4px 11px rgb(0 0 0 / 12%);
     transition: $transition-ease-in-out;
+    background-size: cover;
+    background-position: center center;
     cursor: pointer;
     &:hover {
-      scale: 102%;
+      scale: 101%;
       transition: $transition-ease-in-out;
+      box-shadow: 2px 4px 11px rgb(0 0 0 / 20%);
     }
-    &:nth-child(1) {
-      background-image: url("../images/planet/planet_neptune.jpg");
-    }
-    &:nth-child(2) {
-      background-image: url("../images/planet/planet_uranus.jpg");
-    }
-    &:nth-child(3) {
-      background-image: url("../images/planet/planet_pluto.jpg");
-    }
-    &:nth-child(4) {
-      background-image: url("../images/planet/planet_saturn.jpg");
-    }
-    &:nth-child(5) {
-      background-image: url("../images/planet/planet_mars.jpg");
-    }
-    &:nth-child(6) {
-      background-image: url("../images/planet/planet_venus.jpg");
+    a {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
     }
   }
   &__title {
     font-size: 2.6rem;
     font-weight: $font-bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    &--white {
+      color: #fff;
+    }
   }
   &__sub-title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-bottom: 1.4rem;
+    &--white {
+      color: #fff;
+    }
   }
   &__next,
   &__prev {
@@ -357,7 +359,32 @@ textarea {
   }
 }
 
-/* 사진
+/* 행성 정보
+========================================================================== */
+.planet-slide {
+  .slide__item {
+    &:nth-child(1) {
+      background-image: url("../images/planet/planet_neptune.jpg");
+    }
+    &:nth-child(2) {
+      background-image: url("../images/planet/planet_uranus.jpg");
+    }
+    &:nth-child(3) {
+      background-image: url("../images/planet/planet_pluto.jpg");
+    }
+    &:nth-child(4) {
+      background-image: url("../images/planet/planet_saturn.jpg");
+    }
+    &:nth-child(5) {
+      background-image: url("../images/planet/planet_mars.jpg");
+    }
+    &:nth-child(6) {
+      background-image: url("../images/planet/planet_venus.jpg");
+    }
+  }
+}
+
+/* 갤러리
 ========================================================================== */
 .tab {
   display: flex;
@@ -401,6 +428,31 @@ textarea {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+}
+
+/* 뉴스
+========================================================================== */
+.news-slide {
+  .slide__item {
+    &:nth-child(1) {
+      background-image: url("../images/news/news_1.jpg");
+    }
+    &:nth-child(2) {
+      background-image: url("../images/news/news_2.jpg");
+    }
+    &:nth-child(3) {
+      background-image: url("../images/news/news_3.jpg");
+    }
+    &:nth-child(4) {
+      background-image: url("../images/news/news_4.jpg");
+    }
+    &:nth-child(5) {
+      background-image: url("../images/news/news_5.jpg");
+    }
+    &:nth-child(6) {
+      background-image: url("../images/news/news_1.jpg");
     }
   }
 }

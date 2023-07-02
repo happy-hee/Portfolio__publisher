@@ -76,6 +76,30 @@ button {
 
 /* input & selectbox & textarea
 ========================================================================== */
+label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: 1.6rem;
+  font-weight: $font-semi-bold;
+}
+input {
+  width: 100%;
+  height: 4.2rem;
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  border-width: 0 0 1px 0;
+  border-color: $border-color;
+  border-style: solid;
+  ::placeholder {
+    font-weight: $font-regular;
+  }
+  &:focus,
+  &:focus-visible {
+    outline: 0;
+    border-width: 0 0 1px 0;
+    border-color: #000;
+  }
+}
 input[type="text"],
 input[type="password"],
 input[type="submit"],
@@ -99,49 +123,26 @@ textarea {
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
-}
-input {
+
+  padding: 1.4rem 0;
   width: 100%;
-  padding: 1rem 0;
-  border-width: 0 0 2px 0;
-  border-color: #000;
-  border-style: solid;
-  ::placeholder {
-    font-weight: 300;
-  }
-}
-.input {
-  &__style {
-    &:focus,
-    &:focus-visible {
-      outline: 0;
-      border-width: 0 0 2px 0;
-      border-color: #000;
-    }
-  }
-}
-textarea {
-  padding: 1.4rem;
-  width: 100%;
-  border-color: #000;
+  height: 15rem;
+  border-color: $border-color;
   resize: none;
+  border-width: 0 0 1px 0;
   &::placeholder {
-    font-weight: 400;
+    font-weight: $font-regular;
   }
-}
-.textarea {
-  &__style {
-    &:focus,
-    &:focus-visible {
-      outline: 0;
-      border-width: 0 0 2px 0;
-      border-color: #000;
-    }
+  &:focus,
+  &:focus-visible {
+    outline: 0;
+    border-width: 0 0 1px 0;
+    border-color: #000;
   }
 }
 ::placeholder {
   color: #bbb;
-  font-weight: 300;
+  font-weight: $font-regular;
 }
 
 /* banner
@@ -277,6 +278,19 @@ textarea {
   }
   &__slide {
     position: relative;
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    padding: 3.2rem 2rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 48rem;
+    border-radius: 1000px;
+    font-size: 2rem;
+    font-weight: $font-semi-bold;
+    background-color: #000;
+    color: #fff;
   }
 }
 
@@ -549,6 +563,21 @@ textarea {
         }
       }
     }
+  }
+}
+
+/* 문의하기
+========================================================================== */
+.contact {
+  &__form-row {
+    display: flex;
+    justify-content: space-between;
+    .contact__form {
+      width: 48%;
+    }
+  }
+  &__form {
+    margin-bottom: 5rem;
   }
 }
 

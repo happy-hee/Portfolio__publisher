@@ -405,10 +405,10 @@
           <li class="atoz-list__item">
             <span class="atoz-list__item--number">3.</span> 여행일에 모여
             <mark class="active">
-              <span>주의사항과 안내</span>
-              <span>주의사항과 안내</span>
+              <span>주의사항과 안내사항</span>
+              <span>주의사항과 안내사항</span>
             </mark>
-            를 듣습니다.
+            을 듣습니다.
           </li>
           <li class="atoz-list__item">
             <span class="atoz-list__item--number">4.</span> 우주로 출발 후
@@ -421,12 +421,77 @@
           <li class="atoz-list__item">
             <span class="atoz-list__item--number">5.</span> 지구로
             <mark class="active">
-              <span>안전하게 귀성</span>
-              <span>안전하게 귀성</span>
+              <span>안전하게 귀별</span>
+              <span>안전하게 귀별</span>
             </mark>
             합니다.
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- 문의하기 -->
+    <section class="sec sec__news" id="contactSec">
+      <div class="res-inner">
+        <div class="sec__title-wrapper">
+          <h2 class="sec__title">문의하기</h2>
+          <div class="sec__sub-title">
+            입력폼을 사용한 검증 및 datepicker 플러그인을 사용해 달력을 선택할
+            수 있도록 했습니다.
+          </div>
+        </div>
+        <div class="contact__form-wrapper">
+          <div class="contact__form-row">
+            <div class="contact__form">
+              <label for="checkinInput" class="">출발일</label>
+              <input
+                class=""
+                type="text"
+                id="departureDateInput"
+                placeholder="출발 날짜" />
+            </div>
+            <div class="contact__form">
+              <label for="checkoutInput" class="">오는일</label>
+              <input
+                class=""
+                type="text"
+                id="returnDateInput"
+                placeholder="오는 날짜" />
+            </div>
+          </div>
+          <!-- 이름 -->
+          <div class="contact__form">
+            <label for="name">이름</label>
+            <input
+              class=""
+              id="name"
+              type="text"
+              placeholder="이름을 입력해주세요." />
+          </div>
+
+          <!-- 이메일 -->
+          <div class="contact__form">
+            <label for="email">이메일</label>
+            <input
+              class=""
+              type="email"
+              id="email"
+              placeholder="이메일을 입력해주세요." />
+          </div>
+
+          <!-- 문의사항 -->
+          <div class="contact__form">
+            <label for="content">문의사항</label>
+            <textarea
+              class=""
+              name="contact-content"
+              id="content"
+              cols="30"
+              rows="10"
+              placeholder="문의사항을 입력해주세요."></textarea>
+          </div>
+          <button class="sec__btn" type="button">전송하기</button>
+        </div>
       </div>
     </section>
 

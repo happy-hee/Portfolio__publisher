@@ -4,7 +4,7 @@ $font-main: "Pretendard", sans-serif;
 
 /* Font - size */
 $font-size-title: 4rem;
-$font-size-subtitle: 2rem;
+$font-size-subtitle: 1.8rem;
 $font-size-body: 1.6rem;
 $font-size-small: 1.4rem;
 
@@ -13,10 +13,11 @@ $font-light: 100;
 $font-regular: 200;
 $font-semi-bold: 500;
 $font-bold: 700;
-$font-black: 900;
+$font-black: 800;
 
 /* Color */
 $gray: #f5f5f6;
+$border-color: #ccc;
 
 /* Transition */
 $transition-ease-in-out: all 0.2s ease-in-out;

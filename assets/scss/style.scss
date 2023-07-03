@@ -71,6 +71,30 @@ button {
   height: 100%;
 }
 
+.animate {
+  opacity: 0;
+  transition: all 0.5s;
+  transition-delay: 0.1s;
+  &__delay--2 {
+    transition-delay: 0.2s;
+  }
+  &__delay--3 {
+    transition-delay: 0.3s;
+  }
+  &__delay--4 {
+    transition-delay: 0.4s;
+  }
+  &__delay--5 {
+    transition-delay: 0.5s;
+  }
+  &__delay--6 {
+    transition-delay: 0.6s;
+  }
+  &__delay--7 {
+    transition-delay: 0.7s;
+  }
+}
+
 /* input & selectbox & textarea
 ========================================================================== */
 label {
@@ -570,7 +594,8 @@ textarea {
       &.active {
         span:nth-child(1) {
           width: 100%;
-          transition: width 0.5s;
+          transition-delay: 0.1s;
+          transition: width 0.7s;
           background-color: #000;
           color: #fff;
           font-weight: 200;
@@ -599,13 +624,15 @@ textarea {
 ========================================================================== */
 .title-visual {
   height: 100vh;
-  &__title {
+  &__title-wrapper {
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: center;
+  }
+  &__title {
     font-size: 9rem;
-    font-weight: 800;
+    font-weight: $font-black;
   }
 }
 .portfolio {

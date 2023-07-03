@@ -82,3 +82,47 @@ accordionItems.forEach((accordionItem) => {
     }
   });
 });
+
+/**
+ * 스크롤 애니메이션 - 스크롤시 보임/숨김
+ */
+const scrollAanimate = document.querySelectorAll(".animate");
+const scrollAanimateObserver = new IntersectionObserver((e) => {
+  // 감시중 화면에 등장하면 적용
+  e.forEach((item) => {
+    if (item.isIntersecting) {
+      // 감시중인 아이템이 등장시 실행
+      item.target.style.opacity = 1;
+    } else {
+      // 감시중인 아이템이 퇴장시 실행
+      item.target.style.opacity = 0;
+    }
+  });
+});
+
+scrollAanimate.forEach((item, index) => {
+  //html 요소가 화면에 등장하는지 감시
+  scrollAanimateObserver.observe(scrollAanimate[index]);
+});
+
+/**
+ * 스크롤 애니메이션 - 스크롤시 강조 텍스트 하이라이트
+ */
+const markList = document.querySelectorAll("mark");
+const markObserver = new IntersectionObserver((e) => {
+  // 감시중 화면에 등장하면 적용
+  e.forEach((item, index) => {
+    if (item.isIntersecting) {
+      // 감시중인 아이템이 등장시 실행
+      item.target.classList.add("active");
+    } else {
+      // 감시중인 아이템이 퇴장시 실행
+      item.target.classList.remove("active");
+    }
+  });
+});
+
+markList.forEach((item, index) => {
+  //html 요소가 화면에 등장하는지 감시
+  markObserver.observe(markList[index]);
+});

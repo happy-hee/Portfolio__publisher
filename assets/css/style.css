@@ -278,7 +278,7 @@ textarea:focus, textarea:focus-visible {
 }
 .sec__title {
   font-size: 4rem;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 3rem;
 }
 .sec__sub-title {
@@ -607,6 +607,43 @@ textarea:focus, textarea:focus-visible {
 }
 .portfolio__item-sub {
   margin-bottom: 4rem;
+}
+
+/* 경력 및 기술
+========================================================================== */
+.skill {
+  width: 50%;
+}
+.skill__wrapper {
+  display: flex;
+}
+.skill__left, .skill__right {
+  flex-basis: 50%;
+}
+.skill__content {
+  margin-bottom: 3rem;
+}
+.skill__title {
+  position: relative;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.skill__sub-title {
+  margin-bottom: 1rem;
+  line-height: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.skill__about {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1.4rem;
+}
+
+.skill-list__item {
+  margin-bottom: 3.6rem;
+  line-height: 2;
 }
 
 /* 웹접근성

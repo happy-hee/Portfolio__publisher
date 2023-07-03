@@ -274,7 +274,7 @@ textarea {
   }
   &__title {
     font-size: $font-size-title;
-    font-weight: $font-semi-bold;
+    font-weight: $font-bold;
     margin-bottom: 3rem;
   }
   &__sub-title {
@@ -630,6 +630,46 @@ textarea {
   }
   &__item-sub {
     margin-bottom: 4rem;
+  }
+}
+
+/* 경력 및 기술
+========================================================================== */
+.skill {
+  &__wrapper {
+    display: flex;
+  }
+  &__left,
+  &__right {
+    flex-basis: 50%;
+  }
+
+  width: 50%;
+  &__content {
+    margin-bottom: 3rem;
+  }
+  &__title {
+    position: relative;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-weight: $font-bold;
+  }
+  &__sub-title {
+    margin-bottom: 1rem;
+    line-height: normal;
+    font-weight: $font-bold;
+    font-size: $font-size-subtitle;
+  }
+  &__about {
+    font-size: 1.4rem;
+    font-weight: $font-semi-bold;
+    margin-bottom: 1.4rem;
+  }
+}
+.skill-list {
+  &__item {
+    margin-bottom: 3.6rem;
+    line-height: 2;
   }
 }
 

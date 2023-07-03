@@ -23,8 +23,6 @@ body {
   font-weight: 200;
   color: #000;
   background-color: #fff;
-  /* 추후 삭제 */
-  height: 13000px;
 }
 
 .h1,
@@ -161,6 +159,7 @@ textarea:focus, textarea:focus-visible {
   padding: 1rem 0;
   font-size: 1.4rem;
   text-align: center;
+  z-index: 3;
 }
 .banner__content {
   display: flex;
@@ -170,17 +169,22 @@ textarea:focus, textarea:focus-visible {
   padding-left: 3rem;
   font-weight: 500;
 }
+.banner__link:hover {
+  text-decoration: underline;
+}
 
 /* 헤더
 ========================================================================== */
 .header {
-  position: relative;
+  position: absolute;
   top: 3.6rem;
   width: 100%;
   height: auto;
   padding: 1.4rem 0;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.7);
   z-index: 2;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
 }
 .header__inner {
   display: flex;
@@ -190,6 +194,11 @@ textarea:focus, textarea:focus-visible {
 .header__logo {
   font-size: 0;
 }
+.header.scrolled {
+  position: fixed;
+  top: 0;
+  padding: 0.4rem 0;
+}
 
 .gnb__list {
   display: flex;
@@ -197,6 +206,7 @@ textarea:focus, textarea:focus-visible {
 .gnb__item {
   display: flex;
   font-size: 1.4rem;
+  font-weight: 200;
 }
 .gnb__item a {
   padding: 1rem 2.5rem;
@@ -270,7 +280,8 @@ textarea:focus, textarea:focus-visible {
 /* 섹션
 ========================================================================== */
 .sec {
-  padding: 16rem 0;
+  margin: 16rem 0;
+  padding: 5rem 0;
   overflow: hidden;
 }
 .sec__title-wrapper {

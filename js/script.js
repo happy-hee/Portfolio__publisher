@@ -1,5 +1,37 @@
 /**
- * slide
+ * GNB 클릭시 해당 섹션으로 이동
+ */
+const gnbLink = document.querySelectorAll(".gnb__link");
+const clickToSection = function (gnbLink) {
+  gnbLink.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      // a 태그의 기본 동작(링크 연결) 방지
+      e.preventDefault();
+      // GNB의 href값(id)을 #을 뺀 string으로 반환
+      const gnbLinkString = String(item.hash).substring(1);
+      //해당 string에 해당하는 id를 가진 section의 top 값을 불러옴
+      const sectionTop = document.getElementById(gnbLinkString).offsetTop - 44;
+      // 해당 위치로 스크롤 이동
+      window.scroll({ top: sectionTop, behavior: "smooth" });
+    });
+  });
+};
+// GNB에 섹션 이동
+clickToSection(gnbLink);
+
+/**
+ * GNB 스크롤 내릴시 스타일 변경
+ */
+window.addEventListener("scroll", () => {
+  if (document.documentElement.scrollTop > 70) {
+    document.querySelector(".header").classList.add("scrolled");
+  } else {
+    document.querySelector(".header").classList.remove("scrolled");
+  }
+});
+
+/**
+ * 슬라이드
  */
 // 행성 정보 슬라이드
 const planetSwiper = new Swiper(".planet-slide", {

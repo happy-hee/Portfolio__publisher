@@ -18,9 +18,6 @@ body {
   font-weight: $font-regular;
   color: #000;
   background-color: #fff;
-
-  /* 추후 삭제 */
-  height: 13000px;
 }
 
 .h1,
@@ -156,6 +153,7 @@ textarea {
   padding: 1rem 0;
   font-size: $font-size-small;
   text-align: center;
+  z-index: 3;
   &__content {
     display: flex;
     justify-content: center;
@@ -163,19 +161,24 @@ textarea {
   &__link {
     padding-left: 3rem;
     font-weight: $font-semi-bold;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
 /* 헤더
 ========================================================================== */
 .header {
-  position: relative;
+  position: absolute;
   top: 3.6rem;
   width: 100%;
   height: auto;
   padding: 1.4rem 0;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.7);
   z-index: 2;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -183,6 +186,11 @@ textarea {
   }
   &__logo {
     font-size: 0;
+  }
+  &.scrolled {
+    position: fixed;
+    top: 0;
+    padding: 0.4rem 0;
   }
 }
 
@@ -193,6 +201,7 @@ textarea {
   &__item {
     display: flex;
     font-size: $font-size-small;
+    font-weight: $font-regular;
     a {
       padding: 1rem 2.5rem;
     }
@@ -267,7 +276,8 @@ textarea {
 /* 섹션
 ========================================================================== */
 .sec {
-  padding: 16rem 0;
+  margin: 16rem 0;
+  padding: 5rem 0;
   overflow: hidden;
   &__title-wrapper {
     margin-bottom: 6rem;

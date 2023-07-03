@@ -150,7 +150,8 @@
         <div class="sec__title-wrapper animate">
           <h2 class="sec__title">행성 정보</h2>
           <div class="sec__sub-title">
-            Swiper 플러그인을 사용한 슬라이드 입니다. 클릭시 모달이 열립니다.
+            Swiper 플러그인을 사용한 슬라이드 입니다. 클릭시 하드코딩한 모달이
+            열립니다.
           </div>
         </div>
         <div class="sec__content animate">
@@ -158,29 +159,29 @@
           <div class="sec__slide">
             <div class="swiper planet-slide slide">
               <div class="swiper-wrapper">
-                <div class="swiper-slide slide__item">
+                <div class="swiper-slide slide__item" id="modalNeptuneOpen">
                   <div class="slide__sub-title">많이 가는 행성 1위!</div>
                   <div class="slide__title">해왕성</div>
                 </div>
-                <div class="swiper-slide slide__item">
+                <div class="swiper-slide slide__item" id="modalUranusOpen">
                   <div class="slide__sub-title">많이 가는 행성 2위!</div>
                   <div class="slide__title">천왕성</div>
                 </div>
-                <div class="swiper-slide slide__item">
+                <div class="swiper-slide slide__item" id="modalSaturnOpen">
                   <div class="slide__sub-title">많이 가는 행성 3위!</div>
-                  <div class="slide__title">명왕성</div>
-                </div>
-                <div class="swiper-slide slide__item">
-                  <div class="slide__sub-title">많이 가는 행성 4위!</div>
                   <div class="slide__title">토성</div>
                 </div>
-                <div class="swiper-slide slide__item">
-                  <div class="slide__sub-title">많이 가는 행성 5위!</div>
+                <div class="swiper-slide slide__item" id="modalMarsOpen">
+                  <div class="slide__sub-title">많이 가는 행성 3위!</div>
                   <div class="slide__title">화성</div>
                 </div>
-                <div class="swiper-slide slide__item">
-                  <div class="slide__sub-title">많이 가는 행성 6위!</div>
+                <div class="swiper-slide slide__item" id="modalVenusOpen">
+                  <div class="slide__sub-title">많이 가는 행성 4위!</div>
                   <div class="slide__title">금성</div>
+                </div>
+                <div class="swiper-slide slide__item" id="modalPlutoOpen">
+                  <div class="slide__sub-title">많이 가는 행성 5위!</div>
+                  <div class="slide__title">명왕성</div>
                 </div>
               </div>
             </div>
@@ -190,6 +191,157 @@
               class="slide__prev planet-slide__prev swiper-button-prev"></div>
             <div
               class="slide__next planet-slide__next swiper-button-next"></div>
+          </div>
+
+          <!-- 해왕성 모달 -->
+          <div class="modal" id="modalNeptune">
+            <div class="modal__overlay"></div>
+            <div class="modal__content">
+              <div class="modal__title">해왕성</div>
+              <div class="modal__img">
+                <img src="./assets/images/gallery/neptune.jpg" alt="해왕성" />
+              </div>
+              <div class="modal__text">
+                <p>
+                  해왕성은 태양계의 8개 행성 중 여덟 번째 행성이다. 해왕은
+                  ‘바다의 왕’이라는 한자어로, 포세이돈 또는 넵투누스를 번역한
+                  것이다. 해왕성은 8개 행성 중에서 직경으로는 4번째로 크고,
+                  질량으로는 3번째로 크다.
+                </p>
+                <p class="modal__info-licenses">
+                  출처 :
+                  https://ko.wikipedia.org/wiki/%ED%95%B4%EC%99%95%EC%84%B1
+                </p>
+              </div>
+              <button class="modal__close">
+                <img src="./assets/images/close.png" alt="닫기" />
+              </button>
+            </div>
+          </div>
+
+          <!-- 천왕성 모달 -->
+          <div class="modal" id="modalUranus">
+            <div class="modal__overlay"></div>
+            <div class="modal__content">
+              <div class="modal__title">천왕성</div>
+              <div class="modal__img">
+                <img src="./assets/images/gallery/uranus.jpg" alt="천왕성" />
+              </div>
+              <div class="modal__text">
+                <p>
+                  천왕성은 태양계에 8개 행성 중 일곱번째 행성이며, 세 번째로
+                  반지름이 크고 네 번째로 질량이 큰 태양계의 행성이다. 영어 이름
+                  '우라노스'는 크로노스의 아버지이자 제우스의 할아버지인
+                  그리스의 신 우라노스에서 따온 것이다.
+                </p>
+                <p class="modal__info-licenses">
+                  출처 :
+                  https://ko.wikipedia.org/wiki/%EC%B2%9C%EC%99%95%EC%84%B1
+                </p>
+              </div>
+              <button class="modal__close">
+                <img src="./assets/images/close.png" alt="닫기" />
+              </button>
+            </div>
+          </div>
+
+          <!-- 토성 모달 -->
+          <div class="modal" id="modalSaturn">
+            <div class="modal__overlay"></div>
+            <div class="modal__content">
+              <div class="modal__title">토성</div>
+              <div class="modal__img">
+                <img src="./assets/images/gallery/saturn.jpg" alt="명왕성" />
+              </div>
+              <div class="modal__text">
+                <p>
+                  토성은 태양으로부터 여섯 번째에 있는 태양계의 행성이다. 토성은
+                  태양계 내의 행성 중 목성에 이어 두 번째로 크며, 지름은 약 12만
+                  km로, 지구의 9.1배이며 부피는 760배에 달한다.
+                </p>
+                <p class="modal__info-licenses">
+                  출처 : https://ko.wikipedia.org/wiki/%ED%86%A0%EC%84%B1
+                </p>
+              </div>
+              <button class="modal__close">
+                <img src="./assets/images/close.png" alt="닫기" />
+              </button>
+            </div>
+          </div>
+
+          <!-- 화성 모달 -->
+          <div class="modal" id="modalMars">
+            <div class="modal__overlay"></div>
+            <div class="modal__content">
+              <div class="modal__title">화성</div>
+              <div class="modal__img">
+                <img src="./assets/images/gallery/mars.png" alt="화성" />
+              </div>
+              <div class="modal__text">
+                <p>
+                  화성은 태양계의 4번째 행성이며, 4개의 지구형 행성 중 하나이다.
+                  표면의 철의 산화로 붉은색을 띠기 때문에 동양권에서는 불을
+                  뜻하는 화를 써서 화성 또는 형혹성이라 부르고, 서양권에서는
+                  로마 신화의 전쟁의 신 마르스의 이름을 따 Mars라 부른다.
+                </p>
+                <p class="modal__info-licenses">
+                  출처 : https://ko.wikipedia.org/wiki/%ED%99%94%EC%84%B1
+                </p>
+              </div>
+              <button class="modal__close">
+                <img src="./assets/images/close.png" alt="닫기" />
+              </button>
+            </div>
+          </div>
+
+          <!-- 금성 모달 -->
+          <div class="modal" id="modalVenus">
+            <div class="modal__overlay"></div>
+            <div class="modal__content">
+              <div class="modal__title">금성</div>
+              <div class="modal__img">
+                <img src="./assets/images/gallery/venus.jpg" alt="금성" />
+              </div>
+              <div class="modal__text">
+                <p>
+                  금성은 태양계의 두 번째 행성이다. 태양 주위를 224일 주기로
+                  돌고 있는데 반해, 자전 주기는 243일로 공전주기보다 길다. 달에
+                  이어서 밤하늘에서 두 번째로 밝은 천체이다. 가장 밝을 때의
+                  밝기는 -4.5등급이다.
+                </p>
+                <p class="modal__info-licenses">
+                  출처 : https://ko.wikipedia.org/wiki/%EA%B8%88%EC%84%B1
+                </p>
+              </div>
+              <button class="modal__close">
+                <img src="./assets/images/close.png" alt="닫기" />
+              </button>
+            </div>
+          </div>
+
+          <!-- 명왕성 모달 -->
+          <div class="modal" id="modalPluto">
+            <div class="modal__overlay"></div>
+            <div class="modal__content">
+              <div class="modal__title">명왕성</div>
+              <div class="modal__img">
+                <img src="./assets/images/gallery/pluto.jpg" alt="명왕성" />
+              </div>
+              <div class="modal__text">
+                <p>
+                  명왕성 또는 134340 명왕성은 카이퍼 대에 있는 왜행성이다.
+                  암석과 얼음으로 이루어져 있으며, 지구의 위성인 달에 비교하면
+                  질량은 6분의 1, 부피는 3분의 1 정도이다.
+                </p>
+                <p class="modal__info-licenses">
+                  출처 :
+                  https://ko.wikipedia.org/wiki/%EB%AA%85%EC%99%95%EC%84%B1
+                </p>
+              </div>
+              <button class="modal__close">
+                <img src="./assets/images/close.png" alt="닫기" />
+              </button>
+            </div>
           </div>
         </div>
       </div>

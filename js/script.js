@@ -152,3 +152,87 @@ markList.forEach((item, index) => {
   //html 요소가 화면에 등장하는지 감시
   markObserver.observe(markList[index]);
 });
+
+/**
+ * 모달 띄우기
+ */
+const modal = document.querySelectorAll(".modal");
+const modalClose = document.querySelectorAll(".modal__close");
+const modalOverlay = document.querySelectorAll(".modal__overlay");
+
+modal.forEach((item, index) => {
+  // x 버튼으로 모달 닫기
+  modalClose.forEach((item, index) => {
+    modalClose[index].addEventListener("click", () => {
+      modal[index].style.display = "none";
+      document.body.style.overflow = "auto";
+    });
+  });
+
+  // 모달창 바깥 영역 클릭시 모달 닫기
+  modalOverlay.forEach((item, index) => {
+    modalOverlay[index].addEventListener("click", (e) => {
+      const eventTarget = e.target;
+      if (eventTarget.classList.contains("modal__overlay")) {
+        modal[index].style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    });
+  });
+
+  // 모달창 esc키로 닫기
+  window.addEventListener("keyup", (e) => {
+    if (modal[index].style.display === "flex" && e.key === "Escape") {
+      modal[index].style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  });
+});
+
+// 해왕성 모달
+const modalNeptuneOpen = document.querySelector("#modalNeptuneOpen");
+const modalNeptune = document.querySelector("#modalNeptune");
+modalNeptuneOpen.addEventListener("click", () => {
+  modalNeptune.style.display = "flex";
+  document.body.style.overflow = "hidden";
+});
+
+// 천왕성 모달
+const modalUranusOpen = document.querySelector("#modalUranusOpen");
+const modalUranus = document.querySelector("#modalUranus");
+modalUranusOpen.addEventListener("click", () => {
+  modalUranus.style.display = "flex";
+  document.body.style.overflow = "hidden";
+});
+
+// 토성 모달
+const modalSaturnOpen = document.querySelector("#modalSaturnOpen");
+const modalSaturn = document.querySelector("#modalSaturn");
+modalSaturnOpen.addEventListener("click", () => {
+  modalSaturn.style.display = "flex";
+  document.body.style.overflow = "hidden";
+});
+
+// 명왕성 모달
+const modalPlutoOpen = document.querySelector("#modalPlutoOpen");
+const modalPluto = document.querySelector("#modalPluto");
+modalPlutoOpen.addEventListener("click", () => {
+  modalPluto.style.display = "flex";
+  document.body.style.overflow = "hidden";
+});
+
+// 화성 모달
+const modalMarsOpen = document.querySelector("#modalMarsOpen");
+const modalMars = document.querySelector("#modalMars");
+modalMarsOpen.addEventListener("click", () => {
+  modalMars.style.display = "flex";
+  document.body.style.overflow = "hidden";
+});
+
+// 금성 모달
+const modalVenusOpen = document.querySelector("#modalVenusOpen");
+const modalVenus = document.querySelector("#modalVenus");
+modalVenusOpen.addEventListener("click", () => {
+  modalVenus.style.display = "flex";
+  document.body.style.overflow = "hidden";
+});

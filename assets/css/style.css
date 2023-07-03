@@ -10,7 +10,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  word-break: break-all;
+  word-break: keep-all;
 }
 
 html {
@@ -428,6 +428,74 @@ textarea:focus, textarea:focus-visible {
   height: 4rem;
 }
 
+/* 모달
+========================================================================== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.5;
+}
+.modal__content {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  max-width: 45rem;
+  border-radius: 1rem;
+  padding: 3rem;
+  z-index: 9998;
+}
+.modal__title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.modal__close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.modal__close img {
+  width: 100%;
+  height: 100%;
+}
+.modal__img {
+  width: 100%;
+  height: 24rem;
+  margin-bottom: 2rem;
+}
+.modal__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.modal__text {
+  line-height: 1.5;
+}
+.modal__info-licenses {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #999;
+}
+
 /* 행성 정보
 ========================================================================== */
 .planet-slide .slide__item:nth-child(1) {
@@ -437,16 +505,16 @@ textarea:focus, textarea:focus-visible {
   background-image: url("../images/planet/planet_uranus.jpg");
 }
 .planet-slide .slide__item:nth-child(3) {
-  background-image: url("../images/planet/planet_pluto.jpg");
-}
-.planet-slide .slide__item:nth-child(4) {
   background-image: url("../images/planet/planet_saturn.jpg");
 }
-.planet-slide .slide__item:nth-child(5) {
+.planet-slide .slide__item:nth-child(4) {
   background-image: url("../images/planet/planet_mars.jpg");
 }
-.planet-slide .slide__item:nth-child(6) {
+.planet-slide .slide__item:nth-child(5) {
   background-image: url("../images/planet/planet_venus.jpg");
+}
+.planet-slide .slide__item:nth-child(6) {
+  background-image: url("../images/planet/planet_pluto.jpg");
 }
 
 /* 갤러리

@@ -301,6 +301,10 @@ textarea:focus, textarea:focus-visible {
   padding: 1rem 0 1rem 1rem;
 }
 
+.notice-slide {
+  flex-grow: 1;
+}
+
 /* 섹션
 ========================================================================== */
 .sec {
@@ -412,6 +416,16 @@ textarea:focus, textarea:focus-visible {
 }
 .slide__disabled {
   display: none;
+}
+
+.bar-slide {
+  flex-grow: 1;
+}
+.bar-slide__item a:hover {
+  text-decoration: underline;
+}
+.bar-slide .swiper-wrapper {
+  height: 4rem;
 }
 
 /* 행성 정보

@@ -33,6 +33,32 @@ window.addEventListener("scroll", () => {
 /**
  * 슬라이드
  */
+// 공지 슬라이드
+const noticeSwiper = new Swiper(".notice-slide", {
+  direction: "vertical", // 방향
+  loop: true, // 반복 여부
+  slidesPerView: "auto", // 슬라이드 width값
+  autoHeight: true, // 슬라이드 height값
+  autoplay: {
+    // 자동 재생
+    delay: 1500,
+    pauseOnMouseEnter: true, // 마우스 호버시 정지
+  },
+});
+
+// 이벤트 슬라이드
+const eventSwiper = new Swiper(".event-slide", {
+  direction: "vertical", // 방향
+  loop: true, // 반복 여부
+  slidesPerView: "auto", // 슬라이드 width값
+  autoHeight: true, // 슬라이드 height값
+  autoplay: {
+    // 자동 재생
+    delay: 1500,
+    pauseOnMouseEnter: true, // 마우스 호버시 정지
+  },
+});
+
 // 행성 정보 슬라이드
 const planetSwiper = new Swiper(".planet-slide", {
   direction: "horizontal", // 방향

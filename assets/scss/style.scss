@@ -297,6 +297,10 @@ textarea {
   }
 }
 
+.notice-slide {
+  flex-grow: 1;
+}
+
 /* 섹션
 ========================================================================== */
 .sec {
@@ -410,6 +414,17 @@ textarea {
   }
   &__disabled {
     display: none;
+  }
+}
+.bar-slide {
+  flex-grow: 1;
+  &__item {
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  .swiper-wrapper {
+    height: 4rem;
   }
 }
 

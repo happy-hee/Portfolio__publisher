@@ -617,8 +617,9 @@ textarea {
   &__item {
     margin-bottom: 1.6rem;
     a {
-      color: #0083ff;
+      color: #0069ff;
       text-decoration: underline;
+      font-weight: $font-semi-bold;
     }
     &--title {
       font-weight: $font-semi-bold;
@@ -681,10 +682,10 @@ textarea {
   }
   &__list {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0 -3rem;
+    margin: 0 -1rem;
   }
   &__list-item {
     flex-basis: 25%;
@@ -750,6 +751,29 @@ textarea {
     &--check {
       margin-right: 1rem;
     }
+  }
+}
+
+/* 마무리 및 이력서
+========================================================================== */
+.sec {
+  &__end {
+    padding-top: 4rem;
+  }
+}
+.end {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+  &__title {
+    font-size: 4rem;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.8;
+    margin-bottom: 8rem;
   }
 }
 

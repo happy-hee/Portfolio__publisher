@@ -169,15 +169,14 @@ textarea {
 /* 헤더
 ========================================================================== */
 .header {
-  position: absolute;
-  top: 3.6rem;
+  position: sticky;
+  top: 0;
   width: 100%;
   height: auto;
   padding: 1.4rem 0;
-  background: rgba(255, 255, 255, 0.7);
   z-index: 2;
-  -webkit-backdrop-filter: blur(30px);
-  backdrop-filter: blur(30px);
+  background: #fff;
+  transition: $transition-ease-in-out;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -187,9 +186,9 @@ textarea {
     font-size: 0;
   }
   &.scrolled {
-    position: fixed;
-    top: 0;
     padding: 0.4rem 0;
+    background: rgb(246 246 246 / 70%);
+    backdrop-filter: blur(40px);
   }
 }
 
@@ -221,6 +220,7 @@ textarea {
 ========================================================================== */
 .main-visual {
   height: 100vh;
+  margin-top: -6.4rem;
   position: relative;
   &__title {
     font-size: 9rem;
@@ -657,7 +657,7 @@ textarea {
 /* 포트폴리오 정보
 ========================================================================== */
 .title-visual {
-  height: 100vh;
+  padding: 30rem 0;
   &__title-wrapper {
     display: flex;
     flex-direction: column;

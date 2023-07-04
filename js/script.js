@@ -23,7 +23,7 @@ clickToSection(gnbLink);
  * GNB 스크롤 내릴시 스타일 변경
  */
 window.addEventListener("scroll", () => {
-  if (document.documentElement.scrollTop > 70) {
+  if (document.documentElement.scrollTop > 40) {
     document.querySelector(".header").classList.add("scrolled");
   } else {
     document.querySelector(".header").classList.remove("scrolled");

@@ -8,6 +8,10 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- fancybox -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <!-- 기본 CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>SPACE</title>
@@ -362,61 +366,127 @@
           <!-- 탭메뉴 -->
           <div class="gallery__top">
             <ul class="tab">
-              <li class="tab__item active">
-                <a href="#">전체</a>
-              </li>
-              <li class="tab__item">
-                <a href="#">행성</a>
-              </li>
-              <li class="tab__item">
-                <a href="#">우주</a>
-              </li>
-              <li class="tab__item">
-                <a href="#">은하</a>
-              </li>
+              <li class="tab__item active" data-tab="all">전체</li>
+              <li class="tab__item" data-tab="planet">행성</li>
+              <li class="tab__item" data-tab="universe">은하</li>
+              <li class="tab__item" data-tab="etc">기타</li>
             </ul>
           </div>
           <!-- 사진 리스트 -->
           <div class="gallery__wrapper">
-            <div class="gallery__item">
-              <div class="gallery__img">
-                <img src="./assets/images/gallery/picture_1.jpg" alt="" />
-              </div>
+            <div class="gallery__item animate" data-gallery="planet">
+              <a
+                class="gallery__img"
+                href="./assets/images/gallery/mars.png"
+                data-fancybox="planet"
+                data-caption="화성">
+                <img src="./assets/images/gallery/mars.png" alt="화성" />
+              </a>
             </div>
-            <div class="gallery__item">
-              <div class="gallery__img">
-                <img src="./assets/images/gallery/picture_2.jpg" alt="" />
-              </div>
+            <div class="gallery__item animate" data-gallery="etc">
+              <a
+                class="gallery__img"
+                href="./assets/images/gallery/spaceship.jpg"
+                data-fancybox="etc"
+                data-caption="우주선 발사">
+                <img
+                  src="./assets/images/gallery/spaceship.jpg"
+                  alt="우주선 발사" />
+              </a>
             </div>
-            <div class="gallery__item">
-              <div class="gallery__img">
-                <img src="./assets/images/gallery/picture_3.jpg" alt="" />
-              </div>
+            <div class="gallery__item animate" data-gallery="planet">
+              <a
+                class="gallery__img"
+                href="./assets/images/gallery/pluto.jpg"
+                data-fancybox="planet"
+                data-caption="명왕성">
+                <img src="./assets/images/gallery/pluto.jpg" alt="명왕성" />
+              </a>
             </div>
-            <div class="gallery__item">
-              <div class="gallery__img">
-                <img src="./assets/images/gallery/picture_4.jpg" alt="" />
-              </div>
+            <div class="gallery__item animate" data-gallery="universe">
+              <a
+                class="gallery__img"
+                href="./assets/images/gallery/galaxy.jpg"
+                data-fancybox="universe"
+                data-caption="은하">
+                <img src="./assets/images/gallery/galaxy.jpg" alt="은하" />
+              </a>
             </div>
-            <div class="gallery__item">
-              <div class="gallery__img">
-                <img src="./assets/images/gallery/picture_5.jpg" alt="" />
-              </div>
+            <div class="gallery__item animate" data-gallery="planet">
+              <a
+                class="gallery__img"
+                href="./assets/images/gallery/neptune.jpg"
+                data-fancybox="planet"
+                data-caption="해왕성">
+                <img src="./assets/images/gallery/neptune.jpg" alt="해왕성" />
+              </a>
             </div>
-            <div class="gallery__item">
-              <div class="gallery__img">
-                <img src="./assets/images/gallery/picture_3.jpg" alt="" />
-              </div>
+            <div class="gallery__item animate" data-gallery="universe">
+              <a
+                class="gallery__img"
+                href="./assets/images/gallery/planet_light.jpg"
+                data-fancybox="universe"
+                data-caption="행성 뒤 빛">
+                <img
+                  src="./assets/images/gallery/planet_light.jpg"
+                  alt="행성 뒤 빛" />
+              </a>
             </div>
-            <div class="gallery__item">
-              <div class="gallery__img">
-                <img src="./assets/images/gallery/picture_1.jpg" alt="" />
-              </div>
+            <div class="gallery__item animate" data-gallery="planet">
+              <a
+                class="gallery__img"
+                href="./assets/images/gallery/moon.jpg"
+                data-fancybox="planet"
+                data-caption="달">
+                <img src="./assets/images/gallery/moon.jpg" alt="달" />
+              </a>
             </div>
-            <div class="gallery__item">
-              <div class="gallery__img">
-                <img src="./assets/images/gallery/picture_2.jpg" alt="" />
-              </div>
+            <div class="gallery__item animate" data-gallery="planet">
+              <a
+                class="gallery__img"
+                href="./assets/images/gallery/saturn.jpg"
+                data-fancybox="planet"
+                data-caption="토성">
+                <img src="./assets/images/gallery/saturn.jpg" alt="토성" />
+              </a>
+            </div>
+            <div class="gallery__item animate" data-gallery="universe">
+              <a
+                class="gallery__img"
+                href="./assets/images/gallery/planet_list.jpg"
+                data-fancybox="universe"
+                data-caption="나열된 행성">
+                <img
+                  src="./assets/images/gallery/planet_list.jpg"
+                  alt="나열된 행성" />
+              </a>
+            </div>
+            <div class="gallery__item animate" data-gallery="planet">
+              <a
+                class="gallery__img"
+                href="./assets/images/gallery/uranus.jpg"
+                data-fancybox="planet"
+                data-caption="천왕성">
+                <img src="./assets/images/gallery/uranus.jpg" alt="천왕성" />
+              </a>
+            </div>
+            <div class="gallery__item animate" data-gallery="etc">
+              <a
+                class="gallery__img"
+                href="./assets/images/gallery/in.jpg"
+                data-fancybox="etc"
+                data-caption="어딘가의 안">
+                <img src="./assets/images/gallery/in.jpg" alt="어딘가의 안" />
+              </a>
+            </div>
+            <div class="gallery__item animate" data-gallery="planet">
+              <a
+                class="gallery__img"
+                href="./assets/images/gallery/venus.jpg"
+                data-fancybox="planet"
+                data-caption="금성">
+                <img src="./assets/images/gallery/venus.jpg" alt="금성" />
+              </a>
             </div>
           </div>
         </div>
@@ -1058,6 +1128,8 @@
 
     <!-- Swiper 스크립트 -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- fancybox 스크립트 -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <!-- 기본 스크립트 -->
     <script src="./js/script.js"></script>
   </body>

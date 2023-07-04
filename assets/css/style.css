@@ -78,7 +78,7 @@ button {
 
 .animate {
   opacity: 0;
-  transition: all 0.5s;
+  transition: all 0.7s;
   transition-delay: 0.1s;
 }
 .animate__delay--2 {
@@ -524,18 +524,17 @@ textarea:focus, textarea:focus-visible {
   align-items: center;
 }
 .tab__item {
-  margin-right: 2.4rem;
-}
-.tab__item.active a {
-  background-color: #000;
-  color: #fff;
-}
-.tab__item a {
   display: inline-block;
   padding: 1.2rem 6rem;
+  margin-right: 2.4rem;
   border-radius: 100px;
   border: 1px solid #000;
   letter-spacing: 2px;
+  cursor: pointer;
+}
+.tab__item.active {
+  background-color: #000;
+  color: #fff;
 }
 
 .gallery__top {
@@ -550,8 +549,11 @@ textarea:focus, textarea:focus-visible {
 .gallery__item {
   flex: 0 0 25%;
   padding: 1.2rem;
+  display: block;
+  transition: all 0.35s ease-in-out;
 }
 .gallery__img {
+  display: block;
   border: 1px solid #ddd;
   height: 20rem;
 }
@@ -649,8 +651,9 @@ textarea:focus, textarea:focus-visible {
 .atoz-list__item mark span {
   display: inline-block;
   padding-left: 6px;
+  white-space: nowrap;
 }
-.atoz-list__item mark span:nth-child(1) {
+.atoz-list__item mark span:nth-child(2) {
   width: 0;
   position: absolute;
   left: 0;
@@ -659,7 +662,7 @@ textarea:focus, textarea:focus-visible {
   overflow: hidden;
   height: 100%;
 }
-.atoz-list__item mark.active span:nth-child(1) {
+.atoz-list__item mark.active span:nth-child(2) {
   width: 100%;
   transition-delay: 0.1s;
   transition: width 0.7s;

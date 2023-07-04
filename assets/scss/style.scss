@@ -73,7 +73,7 @@ button {
 
 .animate {
   opacity: 0;
-  transition: all 0.5s;
+  transition: all 0.7s;
   transition-delay: 0.1s;
   &__delay--2 {
     transition-delay: 0.2s;
@@ -527,19 +527,16 @@ textarea {
   display: flex;
   align-items: center;
   &__item {
+    display: inline-block;
+    padding: 1.2rem 6rem;
     margin-right: 2.4rem;
+    border-radius: 100px;
+    border: 1px solid #000;
+    letter-spacing: 2px;
+    cursor: pointer;
     &.active {
-      a {
-        background-color: #000;
-        color: #fff;
-      }
-    }
-    a {
-      display: inline-block;
-      padding: 1.2rem 6rem;
-      border-radius: 100px;
-      border: 1px solid #000;
-      letter-spacing: 2px;
+      background-color: #000;
+      color: #fff;
     }
   }
 }
@@ -557,8 +554,11 @@ textarea {
   &__item {
     flex: 0 0 25%;
     padding: 1.2rem;
+    display: block;
+    transition: all 0.35s ease-in-out;
   }
   &__img {
+    display: block;
     border: 1px solid #ddd;
     height: 20rem;
     img {
@@ -664,8 +664,9 @@ textarea {
       span {
         display: inline-block;
         padding-left: 6px;
+        white-space: nowrap;
       }
-      span:nth-child(1) {
+      span:nth-child(2) {
         width: 0;
         position: absolute;
         left: 0;
@@ -675,7 +676,7 @@ textarea {
         height: 100%;
       }
       &.active {
-        span:nth-child(1) {
+        span:nth-child(2) {
           width: 100%;
           transition-delay: 0.1s;
           transition: width 0.7s;

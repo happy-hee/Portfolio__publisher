@@ -236,3 +236,58 @@ modalVenusOpen.addEventListener("click", () => {
   modalVenus.style.display = "flex";
   document.body.style.overflow = "hidden";
 });
+
+/**
+ * 이미지 갤러리 (fancybox)
+ */
+//행성
+Fancybox.bind('[data-fancybox="planet"]', {
+  hideScrollbar: false,
+});
+//우주
+Fancybox.bind('[data-fancybox="universe"]', {
+  hideScrollbar: false,
+});
+//기타
+Fancybox.bind('[data-fancybox="etc"]', {
+  hideScrollbar: false,
+});
+
+/**
+ * 갤러리 탭메뉴
+ */
+const tab = document.querySelector(".tab");
+const tabItem = document.querySelectorAll(".tab__item");
+const tabContent = document.querySelectorAll(".gallery__item");
+
+tab.addEventListener("click", (e) => {
+  // 탭메뉴 활성화
+  const tabDataset = e.target.dataset.tab;
+  tabItem.forEach((item) => {
+    item.classList.remove("active");
+  });
+  e.target.classList.add("active");
+
+  // 탭별 이미지 활성화 애니메이션
+  tabContent.forEach((item) => {
+    item.style.opacity = "0";
+    if (tabDataset === "all" || item.dataset.gallery === tabDataset) {
+      item.style.transform = "scale(0)";
+      item.style.opacity = "0";
+      window.setTimeout(function () {
+        item.style.transform = "scale(1)";
+        item.style.position = "relative";
+        item.style.top = "0";
+        item.style.opacity = "1";
+      }, 350);
+    } else {
+      item.style.transform = "scale(0)";
+      //4초 후(애니메이션 효과 시간)에 display none 처리
+      window.setTimeout(function () {
+        item.style.position = "absolute";
+        item.style.top = "-100%";
+        item.style.opacity = "0";
+      }, 350);
+    }
+  });
+});

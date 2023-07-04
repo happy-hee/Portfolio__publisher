@@ -103,9 +103,11 @@ const scrollAanimateObserver = new IntersectionObserver((e) => {
     if (item.isIntersecting) {
       // 감시중인 아이템이 등장시 실행
       item.target.style.opacity = 1;
+      item.target.style.transform = "translateY(0)";
     } else {
       // 감시중인 아이템이 퇴장시 실행
       item.target.style.opacity = 0;
+      item.target.style.transform = "translateY(-30px)";
     }
   });
 });

@@ -166,31 +166,6 @@ textarea {
   font-weight: $font-regular;
 }
 
-/* 배너
-========================================================================== */
-.banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: $gray;
-  padding: 1rem 0;
-  font-size: $font-size-small;
-  text-align: center;
-  z-index: 3;
-  &__content {
-    display: flex;
-    justify-content: center;
-  }
-  &__link {
-    padding-left: 3rem;
-    font-weight: $font-semi-bold;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
 /* 헤더
 ========================================================================== */
 .header {
@@ -565,31 +540,6 @@ textarea {
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-  }
-}
-
-/* 뉴스
-========================================================================== */
-.news-slide {
-  .slide__item {
-    &:nth-child(1) {
-      background-image: url("../images/news/news_1.jpg");
-    }
-    &:nth-child(2) {
-      background-image: url("../images/news/news_2.jpg");
-    }
-    &:nth-child(3) {
-      background-image: url("../images/news/news_3.jpg");
-    }
-    &:nth-child(4) {
-      background-image: url("../images/news/news_4.jpg");
-    }
-    &:nth-child(5) {
-      background-image: url("../images/news/news_5.jpg");
-    }
-    &:nth-child(6) {
-      background-image: url("../images/news/news_1.jpg");
     }
   }
 }

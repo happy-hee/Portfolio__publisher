@@ -23,12 +23,6 @@ body {
   font-weight: 200;
   color: #000;
   background-color: #fff;
-  height: 1000px;
-}
-
-.dp_none {
-  width: 100%;
-  overflow: hidden;
 }
 
 .h1,
@@ -78,7 +72,6 @@ button {
   position: relative;
   margin: 0 auto;
   padding: 0 2rem;
-  max-width: 1280px;
   height: 100%;
 }
 
@@ -267,11 +260,10 @@ textarea:focus, textarea:focus-visible {
 ========================================================================== */
 .main-visual {
   height: 100vh;
-  margin-top: -6.4rem;
   position: relative;
 }
 .main-visual__title {
-  font-size: 9rem;
+  font-size: 5rem;
   font-weight: 800;
   display: flex;
   flex-direction: column;
@@ -711,7 +703,7 @@ textarea:focus, textarea:focus-visible {
   justify-content: center;
 }
 .title-visual__title {
-  font-size: 9rem;
+  font-size: 5rem;
   font-weight: 800;
 }
 
@@ -887,8 +879,19 @@ textarea:focus, textarea:focus-visible {
 /* 반응형 Media query
 ========================================================================== */
 /* Tablet */
+@media (min-width: 768px) {
+  .main-visual__title {
+    font-size: 9rem;
+  }
+  .title-visual__title {
+    font-size: 7rem;
+  }
+}
 /* 데스크탑 */
 @media (min-width: 1024px) {
+  .res-inner {
+    max-width: 1280px;
+  }
   .header .res-inner {
     display: flex;
     flex-direction: row;
@@ -923,6 +926,12 @@ textarea:focus, textarea:focus-visible {
   }
   .gnb__btn {
     display: none !important;
+  }
+  .main-visual {
+    margin-top: -6.8rem;
+  }
+  .title-visual__title {
+    font-size: 9rem;
   }
 }
 /* 웹접근성

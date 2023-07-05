@@ -1,4 +1,25 @@
 /**
+ * 모바일 GNB 열기/닫기
+ */
+const headerGnb = document.querySelector(".header__gnb");
+const gnbOpenBtn = document.querySelector(".gnb__open-btn");
+const gnbCloseBtn = document.querySelector(".gnb__close-btn");
+
+//사이드메뉴 열기
+gnbOpenBtn.addEventListener("click", () => {
+  headerGnb.classList.add("gnb--open");
+  gnbOpenBtn.style.display = "none";
+  gnbCloseBtn.style.display = "block";
+});
+
+//사이드메뉴 닫기
+gnbCloseBtn.addEventListener("click", () => {
+  headerGnb.classList.remove("gnb--open");
+  gnbOpenBtn.style.display = "block";
+  gnbCloseBtn.style.display = "none";
+});
+
+/**
  * GNB 클릭시 해당 섹션으로 이동
  */
 const gnbLink = document.querySelectorAll(".gnb__link");
@@ -13,6 +34,9 @@ const clickToSection = function (gnbLink) {
       const sectionTop = document.getElementById(gnbLinkString).offsetTop - 44;
       // 해당 위치로 스크롤 이동
       window.scroll({ top: sectionTop, behavior: "smooth" });
+      headerGnb.classList.remove("gnb--open");
+      gnbOpenBtn.style.display = "block";
+      gnbCloseBtn.style.display = "none";
     });
   });
 };

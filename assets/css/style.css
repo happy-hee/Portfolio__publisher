@@ -23,6 +23,12 @@ body {
   font-weight: 200;
   color: #000;
   background-color: #fff;
+  height: 1000px;
+}
+
+.dp_none {
+  width: 100%;
+  overflow: hidden;
 }
 
 .h1,
@@ -171,14 +177,15 @@ textarea:focus, textarea:focus-visible {
 /* 헤더
 ========================================================================== */
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: auto;
   padding: 1.4rem 0;
   z-index: 2;
   background: #fff;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 .header__inner {
   display: flex;
@@ -189,13 +196,52 @@ textarea:focus, textarea:focus-visible {
   font-size: 0;
 }
 .header.scrolled {
-  padding: 0.4rem 0;
-  background: rgba(246, 246, 246, 0.6);
-  backdrop-filter: blur(30px);
+  padding: 0.8rem 0;
+  background: #fafafa;
+}
+.header.scrolled .header__gnb {
+  top: 4rem;
+}
+.header__gnb {
+  position: fixed;
+  top: 5.2rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  background: rgba(227, 227, 227, 0.13);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  display: none;
+}
+.header__gnb--open {
+  display: block;
 }
 
+.gnb {
+  background-color: #ffffff;
+  color: #000;
+}
+.gnb__btn img {
+  width: 100%;
+  height: 100%;
+}
+.gnb--open {
+  display: block;
+  transition: all 0.1s ease-in-out;
+}
+.gnb__open-btn {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+.gnb__close-btn {
+  display: none;
+  width: 1.4rem;
+  height: 1.4rem;
+}
 .gnb__list {
   display: flex;
+  flex-direction: column;
 }
 .gnb__item {
   display: flex;
@@ -203,7 +249,8 @@ textarea:focus, textarea:focus-visible {
   font-weight: 200;
 }
 .gnb__item a {
-  padding: 1rem 2.5rem;
+  width: 100%;
+  padding: 1.5rem 2.5rem;
 }
 
 .logo {
@@ -837,6 +884,47 @@ textarea:focus, textarea:focus-visible {
   margin-bottom: 8rem;
 }
 
+/* 반응형 Media query
+========================================================================== */
+/* Tablet */
+/* 데스크탑 */
+@media (min-width: 1024px) {
+  .header .res-inner {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .header__gnb {
+    position: relative;
+    top: 0 !important;
+    bottom: auto;
+    display: block;
+    background-color: transparent;
+    backdrop-filter: none;
+  }
+  .header.scrolled {
+    padding: 0.4rem 0;
+    background: rgba(246, 246, 246, 0.6);
+    backdrop-filter: blur(30px);
+  }
+  .gnb {
+    position: relative;
+    display: block;
+    top: 0;
+    background-color: transparent;
+  }
+  .gnb__list {
+    flex-direction: row;
+  }
+  .gnb__item a {
+    width: auto;
+    padding: 1rem 2.5rem;
+  }
+  .gnb__btn {
+    display: none !important;
+  }
+}
 /* 웹접근성
 ========================================================================== */
 /* 스크린리더에서만 읽혀지도록 숨김처리 */

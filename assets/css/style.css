@@ -321,20 +321,21 @@ textarea:focus, textarea:focus-visible {
 /* 섹션
 ========================================================================== */
 .sec {
-  margin: 16rem 0;
+  margin: 6rem 0;
   padding: 5rem 0;
   overflow: hidden;
 }
 .sec__title-wrapper {
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 .sec__title {
-  font-size: 4rem;
+  font-size: 2.8rem;
   font-weight: 700;
-  margin-bottom: 3rem;
+  margin-bottom: 1.6rem;
 }
 .sec__sub-title {
   font-size: 1.8rem;
+  line-height: 1.4;
 }
 .sec__slide {
   position: relative;
@@ -366,8 +367,8 @@ textarea:focus, textarea:focus-visible {
   margin: 0 -1.5rem;
 }
 .slide__item {
-  width: 38rem;
-  height: 45rem;
+  width: 30rem;
+  height: 36rem;
   padding: 3rem;
   margin: 0 1.5rem;
   border-radius: 1.4rem;
@@ -482,7 +483,7 @@ textarea:focus, textarea:focus-visible {
   width: 100%;
   max-width: 45rem;
   border-radius: 1rem;
-  padding: 3rem;
+  padding: 2rem;
   z-index: 9998;
 }
 .modal__title {
@@ -492,14 +493,13 @@ textarea:focus, textarea:focus-visible {
 }
 .modal__close {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
-  width: 1.2rem;
-  height: 1.2rem;
+  top: 0;
+  right: 0;
+  padding: 2rem;
 }
 .modal__close img {
-  width: 100%;
-  height: 100%;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 .modal__img {
   width: 100%;
@@ -916,6 +916,15 @@ textarea:focus, textarea:focus-visible {
     width: auto;
     height: auto;
   }
+  .sec {
+    margin: 12rem 0;
+  }
+  .sec__title-wrapper {
+    margin-bottom: 6rem;
+  }
+  .modal__content {
+    padding: 3rem;
+  }
 }
 /* 데스크탑 */
 @media (min-width: 1024px) {
@@ -962,6 +971,17 @@ textarea:focus, textarea:focus-visible {
   }
   .title-visual__title {
     font-size: 9rem;
+  }
+  .sec {
+    margin: 16rem 0;
+  }
+  .sec__title {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+  .slide__item {
+    width: 38rem;
+    height: 45rem;
   }
 }
 /* 웹접근성

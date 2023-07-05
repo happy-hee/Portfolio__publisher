@@ -341,14 +341,10 @@ const submitContact = () => {
   if (departureDateValue.length === 0 || !returnDateValue.length === 0) {
     // 출발일 또는 오는일이 비어있는 경우
     alert("출발일 또는 오는날을 선택해주세요.");
-    departureDateInput.focus();
-    returnDateInput.focus();
     return false;
   } else if (departureDateValue > returnDateValue) {
     // 오는일이 출발일 이후일 경우
     alert("오는날이 출발일 이후여야 합니다.");
-    departureDateInput.focus();
-    returnDateInput.focus();
     return false;
   }
 

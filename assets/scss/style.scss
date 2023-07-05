@@ -100,7 +100,6 @@ button {
 label {
   display: block;
   margin-bottom: 0.6rem;
-  font-size: 1.6rem;
   font-weight: $font-semi-bold;
 }
 input {
@@ -148,6 +147,7 @@ textarea {
   border-color: $border-color;
   resize: none;
   border-width: 0 0 1px 0;
+  font-family: $font-main;
   font-size: 1.4rem;
   &:focus,
   &:focus-visible {
@@ -236,7 +236,6 @@ textarea {
   &__item {
     display: flex;
     font-size: 1.4rem;
-    font-weight: $font-regular;
     a {
       width: 100%;
       padding: 1.5rem 2.5rem;
@@ -343,12 +342,12 @@ textarea {
   &__btn {
     display: flex;
     justify-content: center;
-    padding: 3.2rem 2rem;
+    padding: 2rem;
     margin: 0 auto;
     width: 100%;
-    max-width: 48rem;
+    max-width: 40rem;
     border-radius: 1000px;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: $font-semi-bold;
     background-color: $point-color;
     color: #fff;
@@ -664,7 +663,6 @@ textarea {
   &__item {
     margin-bottom: 3rem;
     font-size: 2rem;
-    font-weight: $font-light;
     &--number {
       font-weight: $font-semi-bold;
     }
@@ -705,13 +703,13 @@ textarea {
 .contact {
   &__form-row {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     .contact__form {
-      width: 48%;
+      width: 100%;
     }
   }
   &__form {
-    margin-bottom: 5rem;
+    margin-bottom: 3.5rem;
   }
 }
 
@@ -936,6 +934,20 @@ textarea {
       font-size: 2.4rem;
     }
   }
+
+  // 문의하기
+  .contact {
+    &__form-row {
+      flex-direction: row;
+      justify-content: space-between;
+      .contact__form {
+        width: 48%;
+      }
+    }
+    &__form {
+      margin-bottom: 5rem;
+    }
+  }
 }
 
 /* 태블릿 */
@@ -980,6 +992,10 @@ textarea {
     margin: 12rem 0;
     &__title-wrapper {
       margin-bottom: 6rem;
+    }
+    &__btn {
+      padding: 2.4rem 1rem;
+      font-size: 1.8rem;
     }
   }
   // 모달
@@ -1076,6 +1092,9 @@ textarea {
     &__title {
       font-size: $font-size-title-pc;
       margin-bottom: 3rem;
+    }
+    &__sub-title {
+      font-size: $font-size-subtitle-pc;
     }
   }
   //슬라이드

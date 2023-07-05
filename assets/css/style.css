@@ -105,7 +105,6 @@ button {
 label {
   display: block;
   margin-bottom: 0.6rem;
-  font-size: 1.6rem;
   font-weight: 500;
 }
 
@@ -154,6 +153,7 @@ textarea {
   border-color: #ccc;
   resize: none;
   border-width: 0 0 1px 0;
+  font-family: "Pretendard", sans-serif;
   font-size: 1.4rem;
 }
 textarea:focus, textarea:focus-visible {
@@ -240,7 +240,6 @@ textarea:focus, textarea:focus-visible {
 .gnb__item {
   display: flex;
   font-size: 1.4rem;
-  font-weight: 200;
 }
 .gnb__item a {
   width: 100%;
@@ -335,7 +334,7 @@ textarea:focus, textarea:focus-visible {
   margin-bottom: 1.6rem;
 }
 .sec__sub-title {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.4;
 }
 .sec__slide {
@@ -344,12 +343,12 @@ textarea:focus, textarea:focus-visible {
 .sec__btn {
   display: flex;
   justify-content: center;
-  padding: 3.2rem 2rem;
+  padding: 2rem;
   margin: 0 auto;
   width: 100%;
-  max-width: 48rem;
+  max-width: 40rem;
   border-radius: 1000px;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 500;
   background-color: rgb(134, 76, 254);
   color: #fff;
@@ -653,7 +652,6 @@ textarea:focus, textarea:focus-visible {
 .atoz-list__item {
   margin-bottom: 3rem;
   font-size: 2rem;
-  font-weight: 100;
 }
 .atoz-list__item--number {
   font-weight: 500;
@@ -690,13 +688,13 @@ textarea:focus, textarea:focus-visible {
 ========================================================================== */
 .contact__form-row {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 .contact__form-row .contact__form {
-  width: 48%;
+  width: 100%;
 }
 .contact__form {
-  margin-bottom: 5rem;
+  margin-bottom: 3.5rem;
 }
 
 .error__empty {
@@ -732,7 +730,7 @@ textarea:focus, textarea:focus-visible {
 }
 .portfolio__title {
   margin-bottom: 2.4rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: rgb(134, 76, 254);
 }
@@ -779,7 +777,7 @@ textarea:focus, textarea:focus-visible {
   margin-bottom: 1rem;
   line-height: normal;
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: rgb(134, 76, 254);
 }
 .skill__about {
@@ -901,6 +899,16 @@ textarea:focus, textarea:focus-visible {
     margin-bottom: 4rem;
     font-size: 2.4rem;
   }
+  .contact__form-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .contact__form-row .contact__form {
+    width: 48%;
+  }
+  .contact__form {
+    margin-bottom: 5rem;
+  }
 }
 /* 태블릿 */
 @media (min-width: 768px) {
@@ -936,6 +944,10 @@ textarea:focus, textarea:focus-visible {
   }
   .sec__title-wrapper {
     margin-bottom: 6rem;
+  }
+  .sec__btn {
+    padding: 2.4rem 1rem;
+    font-size: 1.8rem;
   }
   .modal__content {
     padding: 3rem;
@@ -1016,6 +1028,9 @@ textarea:focus, textarea:focus-visible {
   .sec__title {
     font-size: 4rem;
     margin-bottom: 3rem;
+  }
+  .sec__sub-title {
+    font-size: 1.8rem;
   }
   .slide__item {
     width: 38rem;

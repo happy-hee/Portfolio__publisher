@@ -70,31 +70,6 @@ button {
   height: 100%;
 }
 
-.animate {
-  opacity: 0;
-  transform: translateY(-30px);
-  transition: all 0.6s;
-  transition-delay: 0.1s;
-  &__delay--2 {
-    transition-delay: 0.2s;
-  }
-  &__delay--3 {
-    transition-delay: 0.3s;
-  }
-  &__delay--4 {
-    transition-delay: 0.4s;
-  }
-  &__delay--5 {
-    transition-delay: 0.5s;
-  }
-  &__delay--6 {
-    transition-delay: 0.6s;
-  }
-  &__delay--7 {
-    transition-delay: 0.7s;
-  }
-}
-
 /* input & selectbox & textarea
 ========================================================================== */
 label {
@@ -737,19 +712,19 @@ textarea {
 .portfolio {
   &__wrapper {
     display: flex;
+    flex-direction: column;
   }
   &__info {
     margin-bottom: 6rem;
     &--left,
     &--right {
-      flex-basis: 50%;
+      flex-basis: 100%;
     }
   }
   &__title {
     margin-bottom: 2.4rem;
     font-size: $font-size-subtitle;
-    font-weight: $font-bold;
-    color: $point-color;
+    font-weight: $font-semi-bold;
   }
   &__item {
     margin-bottom: 1.6rem;
@@ -757,9 +732,12 @@ textarea {
       color: #0069ff;
       text-decoration: underline;
       font-weight: $font-semi-bold;
+      &:hover {
+        animation: none;
+      }
     }
     &--title {
-      font-weight: $font-semi-bold;
+      font-weight: 400;
       margin-bottom: 2rem;
     }
     &--sub-title {
@@ -916,10 +894,70 @@ textarea {
   }
 }
 
+/* 애니메이션 효과
+========================================================================== */
+.animate {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 0.6s;
+  transition-delay: 0.1s;
+  &__delay--2 {
+    transition-delay: 0.2s;
+  }
+  &__delay--3 {
+    transition-delay: 0.3s;
+  }
+  &__delay--4 {
+    transition-delay: 0.4s;
+  }
+  &__delay--5 {
+    transition-delay: 0.5s;
+  }
+  &__delay--6 {
+    transition-delay: 0.6s;
+  }
+  &__delay--7 {
+    transition-delay: 0.7s;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    color: rgb(255, 49, 210);
+  }
+  10% {
+    color: rgb(255, 180, 42);
+  }
+  23% {
+    color: rgb(255, 224, 49);
+  }
+  36% {
+    color: rgb(193, 255, 70);
+  }
+  49% {
+    color: rgb(4, 228, 4);
+  }
+  62% {
+    color: rgb(95, 151, 255);
+  }
+  74% {
+    color: rgb(180, 75, 255);
+  }
+  86% {
+    color: rgb(255, 122, 255);
+  }
+  100% {
+    color: rgb(255, 96, 96);
+  }
+}
+
 /* 반응형 Media query
 ========================================================================== */
 /* 모바일 가로 & 태블릿 세로 */
 @media (min-width: 479px) {
+  .sec {
+    margin: 8rem 0;
+  }
   //갤러리
   .gallery {
     &__item {
@@ -1030,6 +1068,26 @@ textarea {
   .gallery {
     &__img {
       height: 20rem;
+    }
+  }
+
+  // 포트폴리오
+  .portfolio {
+    &__wrapper {
+      flex-direction: row;
+    }
+    &__info {
+      &--left,
+      &--right {
+        flex-basis: 50%;
+      }
+    }
+    &__title {
+      font-size: $font-size-subtitle-pc;
+      margin-bottom: 2.6rem;
+    }
+    &__item-sub {
+      margin-bottom: 5rem;
     }
   }
 }
@@ -1144,6 +1202,15 @@ textarea {
     }
     &__body {
       font-size: 1.6rem;
+    }
+  }
+
+  //포트폴리오 정보
+  .portfolio {
+    &__item {
+      a:hover {
+        animation: rainbow 2s infinite linear;
+      }
     }
   }
 }

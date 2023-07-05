@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Date Picker CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css" />
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
@@ -633,7 +637,7 @@
                   class=""
                   type="text"
                   id="departureDateInput"
-                  placeholder="출발 날짜" />
+                  placeholder="출발 날짜를 선택해 주세요." />
               </div>
               <div class="contact__form">
                 <label for="returnDateInput" class="">오는일</label>
@@ -641,7 +645,7 @@
                   class=""
                   type="text"
                   id="returnDateInput"
-                  placeholder="오는 날짜" />
+                  placeholder="오는 날짜를 선택해 주세요." />
               </div>
             </div>
             <!-- 이름 -->
@@ -1030,6 +1034,8 @@
       </div>
     </section>
 
+    <!-- Date Picker 스크립트 -->
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
     <!-- Swiper 스크립트 -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- fancybox 스크립트 -->

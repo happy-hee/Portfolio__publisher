@@ -32,6 +32,7 @@ window.addEventListener("scroll", () => {
 
 /**
  * 슬라이드
+ * (Swiper)
  */
 // 공지 슬라이드
 const noticeSwiper = new Swiper(".notice-slide", {
@@ -277,3 +278,28 @@ tab.addEventListener("click", (e) => {
     }
   });
 });
+
+/**
+ * 출발일/오는일 캘린더
+ * https://mymth.github.io/vanillajs-datepicker/#/?id=using-from-browser
+ */
+const departureDateInput = document.querySelector(
+  'input[id="departureDateInput"]'
+);
+const returnDateInput = document.querySelector('input[id="returnDateInput"]');
+
+// 캘린더 옵션
+const datePickerOption = {
+  language: "ko", //언어
+  autohide: true, //날짜 선택 후 캘린더 숨김 여부
+  format: "yyyy-mm-dd", //날짜 포맷
+  todayHighlight: true, //오늘 날짜 하이라이트
+  minDate: "today", // 선택 가능한 최소 날짜
+  maxDate: "2050/12/31", //선택 가능한 최대 날짜
+};
+
+const departureDatePicker = new Datepicker(
+  departureDateInput,
+  datePickerOption
+);
+const returnDatePicker = new Datepicker(returnDateInput, datePickerOption);

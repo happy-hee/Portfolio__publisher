@@ -112,9 +112,6 @@ input {
   border-width: 0 0 1px 0;
   border-color: $border-color;
   border-style: solid;
-  ::placeholder {
-    font-weight: $font-regular;
-  }
   &:focus,
   &:focus-visible {
     outline: 0;
@@ -152,9 +149,7 @@ textarea {
   border-color: $border-color;
   resize: none;
   border-width: 0 0 1px 0;
-  &::placeholder {
-    font-weight: $font-regular;
-  }
+  font-size: 1.4rem;
   &:focus,
   &:focus-visible {
     outline: 0;
@@ -163,7 +158,7 @@ textarea {
   }
 }
 ::placeholder {
-  color: #bbb;
+  color: #777;
   font-weight: $font-regular;
 }
 
@@ -199,7 +194,7 @@ textarea {
   }
   &__item {
     display: flex;
-    font-size: $font-size-small;
+    font-size: 1.4rem;
     font-weight: $font-regular;
     a {
       padding: 1rem 2.5rem;
@@ -442,7 +437,7 @@ textarea {
     z-index: 9998;
   }
   &__title {
-    font-size: $font-size-title-sm;
+    font-size: 2rem;
     font-weight: $font-semi-bold;
     margin-bottom: 2rem;
   }
@@ -832,7 +827,7 @@ textarea {
   }
   &__list-item {
     padding: 3rem 0;
-    font-size: $font-size-title-sm;
+    font-size: 2rem;
     line-height: 1.8;
     &--check {
       color: $point-color;

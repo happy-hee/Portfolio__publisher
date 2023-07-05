@@ -119,9 +119,6 @@ input {
   border-color: #ccc;
   border-style: solid;
 }
-input ::placeholder {
-  font-weight: 200;
-}
 input:focus, input:focus-visible {
   outline: 0;
   border-width: 0 0 1px 0;
@@ -158,9 +155,7 @@ textarea {
   border-color: #ccc;
   resize: none;
   border-width: 0 0 1px 0;
-}
-textarea::placeholder {
-  font-weight: 200;
+  font-size: 1.4rem;
 }
 textarea:focus, textarea:focus-visible {
   outline: 0;
@@ -169,7 +164,7 @@ textarea:focus, textarea:focus-visible {
 }
 
 ::placeholder {
-  color: #bbb;
+  color: #777;
   font-weight: 200;
 }
 

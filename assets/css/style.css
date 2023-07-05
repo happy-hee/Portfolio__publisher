@@ -204,6 +204,7 @@ textarea:focus, textarea:focus-visible {
   height: auto;
   background: rgba(227, 227, 227, 0.13);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   overflow: hidden;
   display: none;
 }
@@ -546,47 +547,47 @@ textarea:focus, textarea:focus-visible {
 .tab {
   display: flex;
   align-items: center;
+  font-size: 1.5rem;
 }
 .tab__item {
-  display: inline-block;
-  padding: 1.2rem 6rem;
-  margin-right: 2.4rem;
-  border-radius: 100px;
-  color: rgb(134, 76, 254);
-  border: 1px solid rgb(134, 76, 254);
+  flex-basis: 25%;
+  text-align: center;
+  padding: 1.6rem 1rem;
+  border-radius: 0;
+  border-width: 0;
+  border-style: solid;
+  border-color: rgb(134, 76, 254);
   letter-spacing: 2px;
+  box-shadow: inset 0px -3px 0px 0px #ddd;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-.tab__item:hover {
-  background-color: rgb(134, 76, 254);
-  color: #fff;
-  transition: all 0.2s ease-in-out;
-}
 .tab__item.active {
-  background-color: rgb(134, 76, 254);
-  color: #fff;
+  box-shadow: inset 0px -3px 0px 0px rgb(134, 76, 254);
+}
+.tab__item:last-child {
+  margin-right: 0;
 }
 
 .gallery__top {
-  margin-bottom: 4rem;
+  margin-bottom: 2.4rem;
 }
 .gallery__wrapper {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: -1.2rem;
+  margin: -0.6rem;
 }
 .gallery__item {
-  flex: 0 0 25%;
-  padding: 1.2rem;
+  flex: 0 0 50%;
+  padding: 0.6rem;
   display: block;
   transition: all 0.35s ease-in-out;
 }
 .gallery__img {
   display: block;
   border: 1px solid #ddd;
-  height: 20rem;
+  height: 17rem;
 }
 .gallery__img img {
   width: 100%;
@@ -887,7 +888,13 @@ textarea:focus, textarea:focus-visible {
 
 /* 반응형 Media query
 ========================================================================== */
-/* Tablet */
+/* 모바일 가로 & 태블릿 세로 */
+@media (min-width: 479px) {
+  .gallery__item {
+    flex: 0 0 33.3%;
+  }
+}
+/* 태블릿 */
 @media (min-width: 768px) {
   body {
     font-size: 1.6rem;
@@ -925,6 +932,28 @@ textarea:focus, textarea:focus-visible {
   .modal__content {
     padding: 3rem;
   }
+  .tab__item {
+    flex-basis: auto;
+    padding: 1.2rem 6rem;
+    margin-right: 2.4rem;
+    border-radius: 100px;
+    border-width: 1px 1px 1px 1px;
+    color: rgb(134, 76, 254);
+    box-shadow: none;
+  }
+  .tab__item.active {
+    background-color: rgb(134, 76, 254);
+    color: #fff;
+    box-shadow: none;
+  }
+  .tab__item:hover {
+    background-color: rgb(134, 76, 254);
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+  }
+  .gallery__img {
+    height: 20rem;
+  }
 }
 /* 데스크탑 */
 @media (min-width: 1024px) {
@@ -949,6 +978,7 @@ textarea:focus, textarea:focus-visible {
     padding: 0.4rem 0;
     background: rgba(246, 246, 246, 0.6);
     backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
   }
   .gnb {
     position: relative;
@@ -982,6 +1012,12 @@ textarea:focus, textarea:focus-visible {
   .slide__item {
     width: 38rem;
     height: 45rem;
+  }
+  .gallery__top {
+    margin-bottom: 4rem;
+  }
+  .gallery__item {
+    flex: 0 0 25%;
   }
 }
 /* 웹접근성

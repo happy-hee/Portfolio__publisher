@@ -125,7 +125,7 @@ input ::placeholder {
 input:focus, input:focus-visible {
   outline: 0;
   border-width: 0 0 1px 0;
-  border-color: #000;
+  border-color: rgb(134, 76, 254);
 }
 
 input[type=text],
@@ -165,7 +165,7 @@ textarea::placeholder {
 textarea:focus, textarea:focus-visible {
   outline: 0;
   border-width: 0 0 1px 0;
-  border-color: #000;
+  border-color: rgb(134, 76, 254);
 }
 
 ::placeholder {
@@ -312,8 +312,13 @@ textarea:focus, textarea:focus-visible {
   border-radius: 1000px;
   font-size: 2rem;
   font-weight: 500;
-  background-color: #000;
+  background-color: rgb(134, 76, 254);
   color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.sec__btn:hover {
+  background-color: rgb(108, 44, 235);
+  transition: all 0.2s ease-in-out;
 }
 
 /* 슬라이드
@@ -504,12 +509,19 @@ textarea:focus, textarea:focus-visible {
   padding: 1.2rem 6rem;
   margin-right: 2.4rem;
   border-radius: 100px;
-  border: 1px solid #000;
+  color: rgb(134, 76, 254);
+  border: 1px solid rgb(134, 76, 254);
   letter-spacing: 2px;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.tab__item:hover {
+  background-color: rgb(134, 76, 254);
+  color: #fff;
+  transition: all 0.2s ease-in-out;
 }
 .tab__item.active {
-  background-color: #000;
+  background-color: rgb(134, 76, 254);
   color: #fff;
 }
 
@@ -621,7 +633,7 @@ textarea:focus, textarea:focus-visible {
   width: 100%;
   transition-delay: 0.1s;
   transition: width 0.7s;
-  background-color: #000;
+  background-color: rgb(134, 76, 254);
   color: #fff;
   font-weight: 200;
 }
@@ -666,8 +678,9 @@ textarea:focus, textarea:focus-visible {
 }
 .portfolio__title {
   margin-bottom: 2.4rem;
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: rgb(134, 76, 254);
 }
 .portfolio__item {
   margin-bottom: 1.6rem;
@@ -713,6 +726,7 @@ textarea:focus, textarea:focus-visible {
   line-height: normal;
   font-weight: 700;
   font-size: 1.8rem;
+  color: rgb(134, 76, 254);
 }
 .skill__about {
   font-size: 1.4rem;
@@ -798,6 +812,7 @@ textarea:focus, textarea:focus-visible {
   line-height: 1.8;
 }
 .how-work__list-item--check {
+  color: rgb(134, 76, 254);
   margin-right: 1rem;
 }
 

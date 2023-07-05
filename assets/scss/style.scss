@@ -119,7 +119,7 @@ input {
   &:focus-visible {
     outline: 0;
     border-width: 0 0 1px 0;
-    border-color: #000;
+    border-color: $point-color;
   }
 }
 input[type="text"],
@@ -159,7 +159,7 @@ textarea {
   &:focus-visible {
     outline: 0;
     border-width: 0 0 1px 0;
-    border-color: #000;
+    border-color: $point-color;
   }
 }
 ::placeholder {
@@ -307,8 +307,13 @@ textarea {
     border-radius: 1000px;
     font-size: 2rem;
     font-weight: $font-semi-bold;
-    background-color: #000;
+    background-color: $point-color;
     color: #fff;
+    transition: $transition-ease-in-out;
+    &:hover {
+      background-color: $point-color-hover;
+      transition: $transition-ease-in-out;
+    }
   }
 }
 
@@ -507,11 +512,18 @@ textarea {
     padding: 1.2rem 6rem;
     margin-right: 2.4rem;
     border-radius: 100px;
-    border: 1px solid #000;
+    color: $point-color;
+    border: 1px solid $point-color;
     letter-spacing: 2px;
     cursor: pointer;
+    transition: $transition-ease-in-out;
+    &:hover {
+      background-color: $point-color;
+      color: #fff;
+      transition: $transition-ease-in-out;
+    }
     &.active {
-      background-color: #000;
+      background-color: $point-color;
       color: #fff;
     }
   }
@@ -631,7 +643,7 @@ textarea {
           width: 100%;
           transition-delay: 0.1s;
           transition: width 0.7s;
-          background-color: #000;
+          background-color: $point-color;
           color: #fff;
           font-weight: 200;
         }
@@ -683,8 +695,9 @@ textarea {
   }
   &__title {
     margin-bottom: 2.4rem;
-    font-size: $font-size-title-sm;
-    font-weight: $font-semi-bold;
+    font-size: $font-size-subtitle;
+    font-weight: $font-bold;
+    color: $point-color;
   }
   &__item {
     margin-bottom: 1.6rem;
@@ -732,6 +745,7 @@ textarea {
     line-height: normal;
     font-weight: $font-bold;
     font-size: $font-size-subtitle;
+    color: $point-color;
   }
   &__about {
     font-size: 1.4rem;
@@ -821,6 +835,7 @@ textarea {
     font-size: $font-size-title-sm;
     line-height: 1.8;
     &--check {
+      color: $point-color;
       margin-right: 1rem;
     }
   }

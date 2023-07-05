@@ -19,7 +19,7 @@ html {
 
 body {
   font-family: "Pretendard", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 200;
   color: #000;
   background-color: #fff;
@@ -277,19 +277,19 @@ textarea:focus, textarea:focus-visible {
 .notice-bar {
   display: flex;
   align-items: center;
+  flex-direction: column;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
 }
+.notice-bar__left, .notice-bar__right {
+  width: 100%;
+}
 .notice-bar__left {
-  width: 50%;
   background-color: #000;
   color: #fff;
 }
 .notice-bar__left--inner {
   margin: 0 0 0 auto;
-}
-.notice-bar__right {
-  width: 50%;
 }
 .notice-bar__right--inner {
   margin: 0 auto 0 0;
@@ -297,18 +297,21 @@ textarea:focus, textarea:focus-visible {
 .notice-bar__inner {
   display: flex;
   align-items: center;
-  max-width: 640px;
-  padding: 1.4rem 2rem;
+  padding: 0.8rem 2rem;
 }
 .notice-bar__title {
   font-weight: 500;
-  margin-right: 2rem;
+  flex-basis: 6.4rem;
 }
 .notice-bar__list {
   flex-grow: 1;
 }
 .notice-bar__more {
   padding: 1rem 0 1rem 1rem;
+}
+.notice-bar__more img {
+  width: 14px;
+  height: 14px;
 }
 
 .notice-slide {
@@ -435,6 +438,12 @@ textarea:focus, textarea:focus-visible {
 
 .bar-slide {
   flex-grow: 1;
+  overflow: hidden;
+}
+.bar-slide__item {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 말줄임 적용 */
 }
 .bar-slide__item a:hover {
   text-decoration: underline;
@@ -880,11 +889,32 @@ textarea:focus, textarea:focus-visible {
 ========================================================================== */
 /* Tablet */
 @media (min-width: 768px) {
+  body {
+    font-size: 1.6rem;
+  }
   .main-visual__title {
     font-size: 9rem;
   }
   .title-visual__title {
     font-size: 7rem;
+  }
+  .notice-bar {
+    flex-direction: row;
+  }
+  .notice-bar__left, .notice-bar__right {
+    width: 50%;
+  }
+  .notice-bar__inner {
+    max-width: 64rem;
+    padding: 1.4rem 2rem;
+  }
+  .notice-bar__title {
+    flex-basis: auto;
+    margin-right: 2rem;
+  }
+  .notice-bar__more img {
+    width: auto;
+    height: auto;
   }
 }
 /* 데스크탑 */

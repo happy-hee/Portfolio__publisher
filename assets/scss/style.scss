@@ -274,10 +274,14 @@ textarea {
 .notice-bar {
   display: flex;
   align-items: center;
+  flex-direction: column;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
+  &__left,
+  &__right {
+    width: 100%;
+  }
   &__left {
-    width: 50%;
     background-color: #000;
     color: #fff;
     &--inner {
@@ -285,7 +289,6 @@ textarea {
     }
   }
   &__right {
-    width: 50%;
     &--inner {
       margin: 0 auto 0 0;
     }
@@ -293,18 +296,21 @@ textarea {
   &__inner {
     display: flex;
     align-items: center;
-    max-width: 640px;
-    padding: 1.4rem 2rem;
+    padding: 0.8rem 2rem;
   }
   &__title {
     font-weight: $font-semi-bold;
-    margin-right: 2rem;
+    flex-basis: 6.4rem;
   }
   &__list {
     flex-grow: 1;
   }
   &__more {
     padding: 1rem 0 1rem 1rem;
+    img {
+      width: 14px;
+      height: 14px;
+    }
   }
 }
 
@@ -434,7 +440,11 @@ textarea {
 }
 .bar-slide {
   flex-grow: 1;
+  overflow: hidden;
   &__item {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* 말줄임 적용 */
     a:hover {
       text-decoration: underline;
     }
@@ -909,6 +919,9 @@ textarea {
 ========================================================================== */
 /* Tablet */
 @media (min-width: 768px) {
+  body {
+    font-size: $font-size-body-pc;
+  }
   .main-visual {
     &__title {
       font-size: 9rem;
@@ -917,6 +930,27 @@ textarea {
   .title-visual {
     &__title {
       font-size: 7rem;
+    }
+  }
+  .notice-bar {
+    flex-direction: row;
+    &__left,
+    &__right {
+      width: 50%;
+    }
+    &__inner {
+      max-width: 64rem;
+      padding: 1.4rem 2rem;
+    }
+    &__title {
+      flex-basis: auto;
+      margin-right: 2rem;
+    }
+    &__more {
+      img {
+        width: auto;
+        height: auto;
+      }
     }
   }
 }

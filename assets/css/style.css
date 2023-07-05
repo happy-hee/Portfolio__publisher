@@ -646,6 +646,12 @@ textarea:focus, textarea:focus-visible {
   margin-bottom: 5rem;
 }
 
+.error__empty {
+  padding-top: 0.6rem;
+  font-size: 1.4rem;
+  color: rgb(134, 76, 254);
+}
+
 /* 포트폴리오 정보
 ========================================================================== */
 .title-visual {

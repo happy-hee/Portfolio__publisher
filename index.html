@@ -624,8 +624,8 @@
         <div class="sec__title-wrapper animate">
           <h2 class="sec__title">문의하기</h2>
           <div class="sec__sub-title">
-            입력폼을 사용한 검증 및 datepicker 플러그인을 사용해 달력을 선택할
-            수 있도록 했습니다.
+            datepicker 플러그인을 사용한 달력 선택 및 전송 버튼 클릭시 입력폼을
+            유효성을 체크합니다.
           </div>
         </div>
         <div class="sec__content">
@@ -656,6 +656,9 @@
                 id="name"
                 type="text"
                 placeholder="이름을 입력해주세요." />
+              <p class="error__empty error__empty--name" style="display: none">
+                * 이름을 입력해 주세요.
+              </p>
             </div>
 
             <!-- 이메일 -->
@@ -666,6 +669,14 @@
                 type="email"
                 id="email"
                 placeholder="이메일을 입력해주세요." />
+              <p class="error__empty error__empty--email" style="display: none">
+                * 이메일을 입력해 주세요.
+              </p>
+              <p
+                class="error__empty error__invalid--email"
+                style="display: none">
+                * 유효한 이메일을 입력해 주세요.
+              </p>
             </div>
 
             <!-- 문의사항 -->
@@ -678,8 +689,16 @@
                 cols="30"
                 rows="10"
                 placeholder="문의사항을 입력해주세요."></textarea>
+
+              <p
+                class="error__empty error__empty--content"
+                style="display: none">
+                * 내용을 입력해 주세요.
+              </p>
             </div>
-            <button class="sec__btn" type="button">전송하기</button>
+            <button class="sec__btn" type="button" onclick="submitContact()">
+              전송하기
+            </button>
           </div>
         </div>
       </div>

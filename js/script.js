@@ -303,3 +303,106 @@ const departureDatePicker = new Datepicker(
   datePickerOption
 );
 const returnDatePicker = new Datepicker(returnDateInput, datePickerOption);
+
+/**
+ * 문의하기 내용 전송
+ */
+const submitContact = () => {
+  /**
+   * 날짜 유효성 체크
+   */
+  const departureDateValue = departureDatePicker.dates; //출발일
+  const returnDateValue = returnDatePicker.dates; //오는일
+
+  if (departureDateValue.length === 0 || !returnDateValue.length === 0) {
+    // 출발일 또는 오는일이 비어있는 경우
+    alert("출발일 또는 오는날을 선택해주세요.");
+    departureDateInput.focus();
+    returnDateInput.focus();
+    return false;
+  } else if (departureDateValue > returnDateValue) {
+    // 오는일이 출발일 이후일 경우
+    alert("오는날이 출발일 이후여야 합니다.");
+    departureDateInput.focus();
+    returnDateInput.focus();
+    return false;
+  }
+
+  /**
+   * 이름/이메일/내용 유효성 체크
+   */
+  const userName = document.querySelector("#name");
+  const userEmail = document.querySelector("#email");
+  const contactContent = document.querySelector("#content");
+
+  //유효성 체크 에러 메세지
+  const errorEmptyName = document.querySelector(".error__empty--name");
+  const errorEmptyEmail = document.querySelector(".error__empty--email");
+  const errorInvalidEmail = document.querySelector(".error__invalid--email");
+  const errorEmptyContent = document.querySelector(".error__empty--content");
+
+  // 이름/이메일의 경우 입력된 공백들 제거
+  const userNameValStr = String(userName.value).replace(/\s+/g, "");
+  const userEmailValStr = String(userEmail.value).replace(/\s+/g, "");
+
+  // 이름 유효성 체크
+  if (!userNameValStr) {
+    errorEmptyName.style.display = "block";
+    userName.focus();
+    // 텍스트 입력시 에러문구 제거
+    userName.addEventListener("keyup", (e) => {
+      if (userName.value === "") {
+        errorEmptyName.style.display = "block";
+      } else {
+        errorEmptyName.style.display = "none";
+      }
+    });
+    return false;
+  }
+
+  // 이메일 유효성 체크
+  if (!userEmailValStr || !userEmailValStr.includes("@")) {
+    if (userEmail.value === "") {
+      errorEmptyEmail.style.display = "block";
+    } else {
+      errorInvalidEmail.style.display = "block";
+    }
+    userEmail.focus();
+
+    // 텍스트 입력 or '@' 포함여부에 따라 에러문구 제거
+    userEmail.addEventListener("keyup", (e) => {
+      // 값이 비어있는 경우
+      if (userEmail.value === "") {
+        errorEmptyEmail.style.display = "block";
+        errorInvalidEmail.style.display = "none";
+        // 이메일에 '@'가 들어가있지 않은 경우
+      } else if (!userEmail.value.includes("@")) {
+        errorEmptyEmail.style.display = "none";
+        errorInvalidEmail.style.display = "block";
+        // 그 외
+      } else {
+        errorEmptyEmail.style.display = "none";
+        errorInvalidEmail.style.display = "none";
+      }
+    });
+    return false;
+  }
+
+  // 내용 유효성 체크
+  if (!contactContent.value) {
+    errorEmptyContent.style.display = "block";
+    contactContent.focus();
+    // 텍스트 입력시 에러문구 제거
+    contactContent.addEventListener("keyup", (e) => {
+      if (contactContent.value === "") {
+        errorEmptyContent.style.display = "block";
+      } else {
+        errorEmptyContent.style.display = "none";
+      }
+    });
+    return false;
+  }
+
+  // 유효성 체크 통과시 전송성공 얼럿
+  alert("전송되었습니다.");
+};

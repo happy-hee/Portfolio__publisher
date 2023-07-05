@@ -183,8 +183,8 @@ textarea {
   }
   &.scrolled {
     padding: 0.4rem 0;
-    background: rgb(246 246 246 / 70%);
-    backdrop-filter: blur(40px);
+    background: rgba(246, 246, 246, 0.6);
+    backdrop-filter: blur(30px);
   }
 }
 

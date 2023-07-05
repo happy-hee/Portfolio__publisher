@@ -190,8 +190,8 @@ textarea:focus, textarea:focus-visible {
 }
 .header.scrolled {
   padding: 0.4rem 0;
-  background: rgba(246, 246, 246, 0.7);
-  backdrop-filter: blur(40px);
+  background: rgba(246, 246, 246, 0.6);
+  backdrop-filter: blur(30px);
 }
 
 .gnb__list {

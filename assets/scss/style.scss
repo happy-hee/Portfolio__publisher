@@ -659,9 +659,10 @@ textarea {
 /* 우주 여행 A-Z
 ========================================================================== */
 .atoz-list {
+  padding-top: 1rem;
   &__item {
-    margin-bottom: 6rem;
-    font-size: 3.6rem;
+    margin-bottom: 3rem;
+    font-size: 2rem;
     font-weight: $font-light;
     &--number {
       font-weight: $font-semi-bold;
@@ -926,6 +927,14 @@ textarea {
       flex: 0 0 33.3%;
     }
   }
+
+  //우주 여행 A-Z
+  .atoz-list {
+    &__item {
+      margin-bottom: 4rem;
+      font-size: 2.4rem;
+    }
+  }
 }
 /* 태블릿 */
 @media (min-width: 768px) {
@@ -1080,6 +1089,15 @@ textarea {
     }
     &__item {
       flex: 0 0 25%;
+    }
+  }
+
+  // 우주 여행 A-Z
+  .atoz-list {
+    padding-top: 2rem;
+    &__item {
+      font-size: 3.6rem;
+      margin-bottom: 6rem;
     }
   }
 }

@@ -794,7 +794,7 @@ textarea {
 ========================================================================== */
 .link {
   &__content {
-    margin: 10rem 0;
+    margin: 6rem 0;
   }
   &__list {
     display: flex;
@@ -804,8 +804,9 @@ textarea {
     margin: 0 -1rem;
   }
   &__list-item {
-    flex-basis: 25%;
+    flex-basis: 100%;
     padding: 0 1rem;
+    margin-bottom: 2rem;
     a {
       display: flex;
       flex-direction: column;
@@ -984,6 +985,13 @@ textarea {
     }
     &__form {
       margin-bottom: 5rem;
+    }
+  }
+
+  // 그동안의 기록
+  .link {
+    &__list-item {
+      flex-basis: 50%;
     }
   }
 }
@@ -1233,6 +1241,16 @@ textarea {
       a:hover {
         animation: rainbow 2s infinite linear;
       }
+    }
+  }
+
+  // 그동안의 기록
+  .link {
+    &__content {
+      margin: 10rem 0;
+    }
+    &__list-item {
+      flex-basis: 25%;
     }
   }
 }

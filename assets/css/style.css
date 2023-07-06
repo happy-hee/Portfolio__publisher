@@ -772,7 +772,7 @@ textarea:focus, textarea:focus-visible {
 /* 그동안의 기록
 ========================================================================== */
 .link__content {
-  margin: 10rem 0;
+  margin: 6rem 0;
 }
 .link__list {
   display: flex;
@@ -782,8 +782,9 @@ textarea:focus, textarea:focus-visible {
   margin: 0 -1rem;
 }
 .link__list-item {
-  flex-basis: 25%;
+  flex-basis: 100%;
   padding: 0 1rem;
+  margin-bottom: 2rem;
 }
 .link__list-item a {
   display: flex;
@@ -945,6 +946,9 @@ textarea:focus, textarea:focus-visible {
   }
   .contact__form {
     margin-bottom: 5rem;
+  }
+  .link__list-item {
+    flex-basis: 50%;
   }
 }
 /* 태블릿 */
@@ -1132,6 +1136,12 @@ textarea:focus, textarea:focus-visible {
   }
   .portfolio__item a:hover {
     animation: rainbow 2s infinite linear;
+  }
+  .link__content {
+    margin: 10rem 0;
+  }
+  .link__list-item {
+    flex-basis: 25%;
   }
 }
 /* 웹접근성

@@ -861,8 +861,8 @@ textarea {
     margin: 5rem 0;
   }
   &__list-item {
-    padding: 3rem 0;
-    font-size: 2rem;
+    padding: 0 0 3rem 0;
+    font-size: 1.6rem;
     line-height: 1.8;
     &--check {
       color: $point-color;
@@ -1102,6 +1102,14 @@ textarea {
     }
     &__content {
       margin-bottom: 3rem;
+    }
+  }
+
+  // 일하는 법
+  .how-work {
+    &__list-item {
+      padding: 3rem 0;
+      font-size: 2rem;
     }
   }
 }

@@ -837,8 +837,8 @@ textarea:focus, textarea:focus-visible {
   margin: 5rem 0;
 }
 .how-work__list-item {
-  padding: 3rem 0;
-  font-size: 2rem;
+  padding: 0 0 3rem 0;
+  font-size: 1.6rem;
   line-height: 1.8;
 }
 .how-work__list-item--check {
@@ -1032,6 +1032,10 @@ textarea:focus, textarea:focus-visible {
   }
   .skill__content {
     margin-bottom: 3rem;
+  }
+  .how-work__list-item {
+    padding: 3rem 0;
+    font-size: 2rem;
   }
 }
 /* 데스크탑 */

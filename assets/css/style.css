@@ -932,6 +932,10 @@ textarea:focus, textarea:focus-visible {
   font-size: 1.4rem;
 }
 
+.f-button {
+  box-shadow: none;
+}
+
 /* 반응형 Media query
 ========================================================================== */
 /* 모바일 가로 & 태블릿 세로 */

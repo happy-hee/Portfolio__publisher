@@ -211,6 +211,7 @@ textarea:focus, textarea:focus-visible {
 .gnb__list {
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid #eaeaea;
 }
 .gnb__item {
   display: flex;
@@ -860,11 +861,11 @@ textarea:focus, textarea:focus-visible {
   justify-content: center;
 }
 .end__title {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 800;
-  text-align: center;
+  text-align: left;
   line-height: 1.8;
-  margin-bottom: 8rem;
+  margin-bottom: 6rem;
 }
 
 /* 애니메이션 효과
@@ -949,6 +950,13 @@ textarea:focus, textarea:focus-visible {
   }
   .link__list-item {
     flex-basis: 50%;
+  }
+  .sec__end {
+    padding-top: 10rem;
+  }
+  .end__title {
+    text-align: center;
+    margin-bottom: 8rem;
   }
 }
 /* 태블릿 */
@@ -1041,6 +1049,9 @@ textarea:focus, textarea:focus-visible {
     padding: 3rem 0;
     font-size: 2rem;
   }
+  .end__title {
+    font-size: 4rem;
+  }
 }
 /* 데스크탑 */
 @media (min-width: 1024px) {
@@ -1075,6 +1086,7 @@ textarea:focus, textarea:focus-visible {
   }
   .gnb__list {
     flex-direction: row;
+    border-bottom: 0;
   }
   .gnb__item a {
     width: auto;
@@ -1142,6 +1154,13 @@ textarea:focus, textarea:focus-visible {
   }
   .link__list-item {
     flex-basis: 25%;
+  }
+  .sec__end {
+    padding-top: 20rem;
+  }
+  .end__title {
+    font-size: 6rem;
+    line-height: 2;
   }
 }
 /* 웹접근성

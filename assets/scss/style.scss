@@ -207,6 +207,7 @@ textarea {
   &__list {
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid #eaeaea;
   }
   &__item {
     display: flex;
@@ -887,11 +888,11 @@ textarea {
     justify-content: center;
   }
   &__title {
-    font-size: 4rem;
-    font-weight: 800;
-    text-align: center;
+    font-size: 3rem;
+    font-weight: $font-black;
+    text-align: left;
     line-height: 1.8;
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
   }
 }
 
@@ -992,6 +993,19 @@ textarea {
   .link {
     &__list-item {
       flex-basis: 50%;
+    }
+  }
+
+  // 마무리 및 이력서
+  .sec {
+    &__end {
+      padding-top: 10rem;
+    }
+  }
+  .end {
+    &__title {
+      text-align: center;
+      margin-bottom: 8rem;
     }
   }
 }
@@ -1120,6 +1134,12 @@ textarea {
       font-size: 2rem;
     }
   }
+  // 마무리 및 이력서
+  .end {
+    &__title {
+      font-size: 4rem;
+    }
+  }
 }
 /* 데스크탑 */
 @media (min-width: 1024px) {
@@ -1155,6 +1175,7 @@ textarea {
     background-color: transparent;
     &__list {
       flex-direction: row;
+      border-bottom: 0;
     }
     &__item {
       a {
@@ -1251,6 +1272,18 @@ textarea {
     }
     &__list-item {
       flex-basis: 25%;
+    }
+  }
+  // 마무리 및 이력서
+  .sec {
+    &__end {
+      padding-top: 20rem;
+    }
+  }
+  .end {
+    &__title {
+      font-size: 6rem;
+      line-height: 2;
     }
   }
 }

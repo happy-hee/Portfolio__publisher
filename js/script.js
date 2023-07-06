@@ -98,6 +98,24 @@ const planetSwiper = new Swiper(".planet-slide", {
     prevEl: ".planet-slide__prev",
     disabledClass: "slide__disabled",
   },
+  // 웹접근성
+  a11y: {
+    prevSlideMessage: "이전 슬라이드",
+    nextSlideMessage: "다음 슬라이드",
+  },
+});
+
+// 행성 정보 아이템 엔터시 active 되도록
+const planetSlideItems = document.querySelectorAll(
+  ".planet-slide .slide__item"
+);
+planetSlideItems.forEach((item) => {
+  // 웹접근성 - 엔터시 클릭
+  item.addEventListener("keyup", (e) => {
+    if (e.keyCode === 13) {
+      item.click();
+    }
+  });
 });
 
 /**
@@ -110,7 +128,7 @@ accordionItems.forEach((accordionItem) => {
     accordionItem.classList.toggle("active");
   });
 
-  // 엔터시 active
+  // 웹접근성 - 엔터시 active
   accordionItem.addEventListener("keyup", (e) => {
     if (e.keyCode === 13) {
       accordionItem.classList.toggle("active");
@@ -271,6 +289,15 @@ const tab = document.querySelector(".tab");
 const tabItem = document.querySelectorAll(".tab__item");
 const tabContent = document.querySelectorAll(".gallery__item");
 
+tabItem.forEach((item) => {
+  // 웹접근성 - 엔터시 클릭
+  item.addEventListener("keyup", (e) => {
+    if (e.keyCode === 13) {
+      item.click();
+    }
+  });
+});
+
 tab.addEventListener("click", (e) => {
   // 탭메뉴 활성화
   const tabDataset = e.target.dataset.tab;
@@ -280,7 +307,8 @@ tab.addEventListener("click", (e) => {
   e.target.classList.add("active");
 
   // 탭별 이미지 활성화 애니메이션
-  tabContent.forEach((item) => {
+  tabContent.forEach((item, index) => {
+    //활성화 이미지
     item.style.opacity = "0";
     if (tabDataset === "all" || item.dataset.gallery === tabDataset) {
       item.style.transform = "scale(0)";
@@ -291,7 +319,13 @@ tab.addEventListener("click", (e) => {
         item.style.top = "0";
         item.style.opacity = "1";
       }, 350);
+
+      // 탭키로 접근 가능
+      tabContent[index].childNodes.forEach((item) => {
+        item.tabIndex = 0;
+      });
     } else {
+      //비활성화 이미지
       item.style.transform = "scale(0)";
       //4초 후(애니메이션 효과 시간)에 display none 처리
       window.setTimeout(function () {
@@ -299,6 +333,11 @@ tab.addEventListener("click", (e) => {
         item.style.top = "-100%";
         item.style.opacity = "0";
       }, 350);
+
+      // 탭키로 접근 불가능
+      tabContent[index].childNodes.forEach((item) => {
+        item.tabIndex = -1;
+      });
     }
   });
 });

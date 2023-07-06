@@ -353,7 +353,7 @@ textarea {
     background-position: center center;
     cursor: pointer;
     &:hover {
-      scale: 101%;
+      transform: scale(1.03);
       transition: $transition-ease-in-out--2;
       box-shadow: 2px 4px 11px rgb(0 0 0 / 20%);
     }
@@ -820,7 +820,7 @@ textarea {
       background-position: center center;
       overflow: hidden;
       &:hover {
-        scale: 101%;
+        transform: scale(1.03);
         transition: $transition-ease-in-out--2;
         box-shadow: 2px 4px 11px rgb(0 0 0 / 20%);
       }

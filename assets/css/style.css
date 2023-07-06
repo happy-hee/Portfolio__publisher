@@ -355,7 +355,7 @@ textarea:focus, textarea:focus-visible {
   cursor: pointer;
 }
 .slide__item:hover {
-  scale: 101%;
+  transform: scale(1.03);
   transition: all 0.2s ease-in-out;
   box-shadow: 2px 4px 11px rgba(0, 0, 0, 0.2);
 }
@@ -800,7 +800,7 @@ textarea:focus, textarea:focus-visible {
   overflow: hidden;
 }
 .link__list-item a:hover {
-  scale: 101%;
+  transform: scale(1.03);
   transition: all 0.2s ease-in-out;
   box-shadow: 2px 4px 11px rgba(0, 0, 0, 0.2);
 }

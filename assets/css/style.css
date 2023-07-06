@@ -608,7 +608,7 @@ textarea:focus, textarea:focus-visible {
   display: block;
   width: 1.4rem;
   height: 1.4rem;
-  background: url(../images/arrow.png) no-repeat;
+  background: url(../images/icon/arrow.png) no-repeat;
   background-size: 100%;
   transition: transform 0.2s linear;
 }

@@ -754,15 +754,16 @@ textarea {
 .skill {
   &__wrapper {
     display: flex;
+    flex-direction: column;
   }
   &__left,
   &__right {
-    flex-basis: 50%;
+    flex-basis: 100%;
   }
 
   width: 50%;
   &__content {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
   }
   &__title {
     position: relative;
@@ -775,7 +776,6 @@ textarea {
     line-height: normal;
     font-weight: $font-bold;
     font-size: $font-size-subtitle;
-    color: $point-color;
   }
   &__about {
     font-size: 1.4rem;
@@ -1088,6 +1088,20 @@ textarea {
     }
     &__item-sub {
       margin-bottom: 5rem;
+    }
+  }
+
+  // 경력 및 기술
+  .skill {
+    &__wrapper {
+      flex-direction: row;
+    }
+    &__left,
+    &__right {
+      flex-basis: 50%;
+    }
+    &__content {
+      margin-bottom: 3rem;
     }
   }
 }

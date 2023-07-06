@@ -738,12 +738,13 @@ textarea:focus, textarea:focus-visible {
 }
 .skill__wrapper {
   display: flex;
+  flex-direction: column;
 }
 .skill__left, .skill__right {
-  flex-basis: 50%;
+  flex-basis: 100%;
 }
 .skill__content {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 .skill__title {
   position: relative;
@@ -756,7 +757,6 @@ textarea:focus, textarea:focus-visible {
   line-height: normal;
   font-weight: 700;
   font-size: 1.6rem;
-  color: rgb(134, 76, 254);
 }
 .skill__about {
   font-size: 1.4rem;
@@ -1023,6 +1023,15 @@ textarea:focus, textarea:focus-visible {
   }
   .portfolio__item-sub {
     margin-bottom: 5rem;
+  }
+  .skill__wrapper {
+    flex-direction: row;
+  }
+  .skill__left, .skill__right {
+    flex-basis: 50%;
+  }
+  .skill__content {
+    margin-bottom: 3rem;
   }
 }
 /* 데스크탑 */
